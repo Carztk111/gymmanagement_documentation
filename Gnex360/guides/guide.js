@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    /* ====================================
+       SIDEBAR NAVIGATION
+    ==================================== */
+
     const links =
         document.querySelectorAll(".guide-link");
 
@@ -8,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
             ".guide-content section"
         );
 
-    // Smooth scrolling when clicking sidebar links
     links.forEach(link => {
 
         link.addEventListener("click", e => {
@@ -33,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    // Highlight active section while scrolling
     function updateActiveLink(){
 
         let current = "";
@@ -58,13 +60,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
         links.forEach(link => {
 
-            link.classList.remove("active");
+            link.classList.remove(
+                "active"
+            );
 
             if(
                 link.getAttribute("href") ===
                 "#" + current
             ){
-                link.classList.add("active");
+                link.classList.add(
+                    "active"
+                );
             }
 
         });
@@ -77,5 +83,67 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     updateActiveLink();
+
+    /* ====================================
+       ACCORDION FUNCTIONALITY
+    ==================================== */
+
+    const accordionHeaders =
+        document.querySelectorAll(
+            ".accordion-header"
+        );
+
+    accordionHeaders.forEach(header => {
+
+        header.addEventListener("click", () => {
+
+            const currentItem =
+                header.parentElement;
+
+            const isOpen =
+                currentItem.classList.contains(
+                    "active"
+                );
+
+            document
+                .querySelectorAll(
+                    ".accordion-item"
+                )
+                .forEach(item => {
+
+                    item.classList.remove(
+                        "active"
+                    );
+
+                });
+
+            if(!isOpen){
+
+                currentItem.classList.add(
+                    "active"
+                );
+
+            }
+
+        });
+
+    });
+
+    /* ====================================
+       OPEN FIRST ACCORDION BY DEFAULT
+    ==================================== */
+
+    const firstAccordion =
+        document.querySelector(
+            ".accordion-item"
+        );
+
+    if(firstAccordion){
+
+        firstAccordion.classList.add(
+            "active"
+        );
+
+    }
 
 });
