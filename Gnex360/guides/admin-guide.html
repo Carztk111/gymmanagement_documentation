@@ -2,410 +2,1845 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrator Guide | GNEX 360</title>
-    <link rel="stylesheet" href="guide.css">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Administrator Guide | GNEX 360
+    </title>
+
+    <link rel="stylesheet"
+          href="guide.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
 
 <div class="guide-wrapper">
 
-    <section class="guide-header">
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+
+    <section class="guide-hero">
 
         <a href="../index.html#for-admins"
-           class="guide-back-button">
-            ← Back to Main Manual
+           class="back-button">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to Manual
+
         </a>
 
-        <span class="guide-tag">
+        <div class="hero-tag">
+
+            <i class="fa-solid fa-user-shield"></i>
+
             ADMINISTRATOR GUIDE
-        </span>
 
-        <h1>Administrator User Manual</h1>
+        </div>
 
-        <p>
-            Complete operational guide for administrators managing
-            members, memberships, attendance, reports, employees,
-            QR check-ins, and gym operations within GNEX 360.
+        <h1>
+
+            Administrator Guide
+
+        </h1>
+
+        <p class="hero-description">
+
+            Learn how to manage members,
+            employees, memberships,
+            attendance records, reports,
+            approvals, and daily gym
+            operations through GNEX 360.
+
         </p>
 
-        <div class="guide-stats">
+        <div class="hero-stats">
 
-            <div class="guide-stat-card">
+            <div class="hero-stat">
+
                 <h3>10+</h3>
-                <p>Administrative Functions</p>
+
+                <p>
+
+                    Administrative
+                    Functions
+
+                </p>
+
             </div>
 
-            <div class="guide-stat-card">
+            <div class="hero-stat">
+
                 <h3>6</h3>
-                <p>Core System Modules</p>
+
+                <p>
+
+                    Core System
+                    Modules
+
+                </p>
+
             </div>
 
-            <div class="guide-stat-card">
+            <div class="hero-stat">
+
                 <h3>100%</h3>
-                <p>Role-Based Access</p>
+
+                <p>
+
+                    Role-Based
+                    Access
+
+                </p>
+
             </div>
 
         </div>
 
     </section>
+        <!-- =========================
+         MAIN LAYOUT
+    ========================== -->
 
     <div class="guide-layout">
 
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
         <aside class="guide-sidebar">
 
-            <h3>ADMIN GUIDE</h3>
+            <h3>ON THIS PAGE</h3>
 
-            <nav class="guide-nav">
+            <nav>
 
-                <a href="#overview" class="guide-link">Overview</a>
+                <a href="#overview"
+                   class="guide-link">
 
-                <a href="#responsibilities" class="guide-link">Responsibilities</a>
+                    <i class="fa-solid fa-circle-info"></i>
 
-                <a href="#dashboard" class="guide-link">Dashboard Overview</a>
+                    Overview
 
-                <a href="#waitlist" class="guide-link">Waitlist Management</a>
+                </a>
 
-                <a href="#members" class="guide-link">Member Management</a>
+                <a href="#capabilities"
+                   class="guide-link">
 
-                <a href="#employees" class="guide-link">Employee Management</a>
+                    <i class="fa-solid fa-user-shield"></i>
 
-                <a href="#memberships" class="guide-link">Membership Management</a>
+                    Administrator Capabilities
 
-                <a href="#attendance" class="guide-link">Attendance Monitoring</a>
+                </a>
 
-                <a href="#qr" class="guide-link">QR Administration</a>
+                <a href="#pages"
+                   class="guide-link">
 
-                <a href="#reports" class="guide-link">Reports & Analytics</a>
+                    <i class="fa-solid fa-layer-group"></i>
 
-                <a href="#settings" class="guide-link">System Settings</a>
+                    Functional Pages
 
-                <a href="#permissions" class="guide-link">Role Permissions</a>
+                </a>
 
-                <a href="#troubleshooting" class="guide-link">Troubleshooting</a>
+                <a href="#workflow"
+                   class="guide-link">
 
-                <a href="#faq" class="guide-link">FAQ</a>
+                    <i class="fa-solid fa-diagram-project"></i>
+
+                    Administrator Workflow
+
+                </a>
+
+                <a href="#waitlist"
+                   class="guide-link">
+
+                    <i class="fa-solid fa-user-clock"></i>
+
+                    Waitlist Management
+
+                </a>
+
+                <a href="#members"
+                   class="guide-link">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    Member Management
+
+                </a>
+
+                <a href="#employees"
+                   class="guide-link">
+
+                    <i class="fa-solid fa-user-tie"></i>
+
+                    Employee Management
+
+                </a>
+
+                <a href="#memberships"
+                   class="guide-link">
+
+                    <i class="fa-solid fa-id-card"></i>
+
+                    Membership Plans
+
+                </a>
+
+                <a href="#attendance"
+                   class="guide-link">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    Attendance Monitoring
+
+                </a>
+
+                <a href="#qr"
+                   class="guide-link">
+
+                    <i class="fa-solid fa-qrcode"></i>
+
+                    QR Administration
+
+                </a>
+
+                <a href="#reports"
+                   class="guide-link">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    Reports & Analytics
+
+                </a>
+
+                <a href="#settings"
+                   class="guide-link">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    System Settings
+
+                </a>
+
+                <a href="#rbac" class="guide-link">
+    <i class="fa-solid fa-table-cells-large"></i>
+    RBAC Matrix
+</a>
 
             </nav>
 
         </aside>
 
+        <!-- =========================
+             CONTENT AREA
+        ========================== -->
+
         <main class="guide-content">
+            <!-- =========================
+     OVERVIEW
+========================= -->
 
-            <section id="overview">
+<section id="overview">
 
-                <h2>Overview</h2>
+    <span class="section-tag">
 
-                <p>
-                    Administrators oversee daily gym operations through
-                    GNEX 360. They manage members, approve applications,
-                    monitor attendance, maintain employee records,
-                    process memberships, and generate reports.
-                </p>
+        ADMINISTRATION
 
-            </section>
+    </span>
 
-            <section id="responsibilities">
+    <h2>
 
-                <h2>Administrator Responsibilities</h2>
+        Overview
 
-                <div class="feature-grid">
+    </h2>
 
-                    <div class="feature-card">
-                        <h3>Manage Members</h3>
-                        <p>Create, update, activate, and deactivate member accounts.</p>
-                    </div>
+    <p>
 
-                    <div class="feature-card">
-                        <h3>Approve Applications</h3>
-                        <p>Review waitlisted applicants and process approvals.</p>
-                    </div>
+        GNEX 360 provides administrators with
+        complete control over gym operations
+        through a centralized management system.
+        Administrators are responsible for
+        processing membership applications,
+        managing members and employees,
+        monitoring attendance records,
+        maintaining membership plans,
+        generating reports, and overseeing
+        daily gym activities.
 
-                    <div class="feature-card">
-                        <h3>Monitor Attendance</h3>
-                        <p>Track attendance records and gym activity.</p>
-                    </div>
+    </p>
 
-                    <div class="feature-card">
-                        <h3>Generate Reports</h3>
-                        <p>Produce operational and performance reports.</p>
-                    </div>
+    <div class="info-card">
 
-                </div>
+        <i class="fa-solid fa-lightbulb"></i>
 
-            </section>
+        <div>
 
-            <section id="dashboard">
+            <h3>
+                Administrative Access
+            </h3>
 
-                <h2>Dashboard Overview</h2>
+            <p>
 
-                <div class="step-list">
+                Administrator accounts have the
+                highest level of system access and
+                can perform operational, management,
+                and reporting functions throughout
+                GNEX 360.
 
-                    <div class="step-item">
-                        <span>1</span>
-                        <div>
-                            <h3>Login</h3>
-                            <p>Access the Admin Dashboard using authorized credentials.</p>
-                        </div>
-                    </div>
+            </p>
 
-                    <div class="step-item">
-                        <span>2</span>
-                        <div>
-                            <h3>Review Summary Cards</h3>
-                            <p>Check active members, attendance, revenue, and alerts.</p>
-                        </div>
-                    </div>
-
-                    <div class="step-item">
-                        <span>3</span>
-                        <div>
-                            <h3>Manage Operations</h3>
-                            <p>Navigate to the required module from the sidebar.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </section>
-
-            <section id="waitlist">
-
-                <h2>Waitlist Management</h2>
-
-                <div class="workflow">
-
-                    <div class="workflow-step">Application Submitted</div>
-
-                    <div class="workflow-arrow">→</div>
-
-                    <div class="workflow-step">Review Applicant</div>
-
-                    <div class="workflow-arrow">→</div>
-
-                    <div class="workflow-step">Approve / Reject</div>
-
-                    <div class="workflow-arrow">→</div>
-
-                    <div class="workflow-step">Member Created</div>
-
-                </div>
-
-            </section>
-
-            <section id="members">
-
-                <h2>Member Management</h2>
-
-                <p>
-                    Administrators can view, edit, suspend,
-                    reactivate, and monitor members.
-                </p>
-
-            </section>
-
-            <section id="employees">
-
-                <h2>Employee Management</h2>
-
-                <p>
-                    Manage coaches and staff accounts, assign roles,
-                    and monitor employee activities.
-                </p>
-
-            </section>
-
-            <section id="memberships">
-
-                <h2>Membership Management</h2>
-
-                <table class="guide-table">
-
-                    <thead>
-                        <tr>
-                            <th>Plan</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-
-                        <tr>
-                            <td>Monthly</td>
-                            <td>30-Day Membership Access</td>
-                        </tr>
-
-                        <tr>
-                            <td>Quarterly</td>
-                            <td>90-Day Membership Access</td>
-                        </tr>
-
-                        <tr>
-                            <td>Annual</td>
-                            <td>365-Day Membership Access</td>
-                        </tr>
-
-                    </tbody>
-
-                </table>
-
-            </section>
-
-            <section id="attendance">
-
-                <h2>Attendance Monitoring</h2>
-
-                <p>
-                    Monitor attendance logs, peak hours,
-                    and attendance trends.
-                </p>
-
-            </section>
-
-            <section id="qr">
-
-                <h2>QR Check-In Administration</h2>
-
-                <p>
-                    Manage QR attendance validation and
-                    investigate attendance issues.
-                </p>
-
-            </section>
-
-            <section id="reports">
-
-                <h2>Reports & Analytics</h2>
-
-                <div class="feature-grid">
-
-                    <div class="feature-card">
-                        <h3>Attendance Reports</h3>
-                    </div>
-
-                    <div class="feature-card">
-                        <h3>Revenue Reports</h3>
-                    </div>
-
-                    <div class="feature-card">
-                        <h3>Membership Reports</h3>
-                    </div>
-
-                    <div class="feature-card">
-                        <h3>Predictive Analytics</h3>
-                    </div>
-
-                </div>
-
-            </section>
-
-            <section id="settings">
-
-                <h2>System Settings</h2>
-
-                <p>
-                    Configure gym settings, notifications,
-                    account policies, and operational preferences.
-                </p>
-
-            </section>
-
-            <section id="permissions">
-
-                <h2>Role Permissions</h2>
-
-                <table class="guide-table">
-
-                    <thead>
-                        <tr>
-                            <th>Action</th>
-                            <th>Admin</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-
-                        <tr>
-                            <td>Manage Members</td>
-                            <td>✓</td>
-                        </tr>
-
-                        <tr>
-                            <td>Approve Waitlist</td>
-                            <td>✓</td>
-                        </tr>
-
-                        <tr>
-                            <td>Generate Reports</td>
-                            <td>✓</td>
-                        </tr>
-
-                        <tr>
-                            <td>Modify Settings</td>
-                            <td>✓</td>
-                        </tr>
-
-                    </tbody>
-
-                </table>
-
-            </section>
-
-            <section id="troubleshooting">
-
-                <h2>Troubleshooting</h2>
-
-                <div class="feature-grid">
-
-                    <div class="feature-card">
-                        <h3>Member Cannot Login</h3>
-                        <p>Verify account activation status.</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <h3>QR Scan Failure</h3>
-                        <p>Verify membership validity and QR assignment.</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <h3>Missing Reports</h3>
-                        <p>Verify date range and report filters.</p>
-                    </div>
-
-                </div>
-
-            </section>
-
-            <section id="faq">
-
-                <h2>Frequently Asked Questions</h2>
-
-                <div class="faq-grid">
-
-                    <div class="feature-card">
-                        <h3>Can admins deactivate members?</h3>
-                        <p>Yes. Member accounts can be suspended or reactivated.</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <h3>Can reports be exported?</h3>
-                        <p>Yes. Reports can be exported for operational use.</p>
-                    </div>
-
-                </div>
-
-            </section>
-
-        </main>
+        </div>
 
     </div>
 
-</div>
+</section>
+<!-- =========================
+     CAPABILITIES
+========================= -->
 
-<button id="backToTop" class="back-to-top">
-    ↑
-</button>
+<section id="capabilities">
 
+    <span class="section-tag">
+
+        ADMIN PRIVILEGES
+
+    </span>
+
+    <h2>
+
+        Administrator Capabilities
+
+    </h2>
+
+    <p>
+
+        Administrators have access to all
+        management modules within GNEX 360.
+        The following capabilities are available
+        through the administrative dashboard.
+
+    </p>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-users"></i>
+
+            <h3>
+                Member Management
+            </h3>
+
+            <ul>
+
+                <li>Create member records</li>
+
+                <li>Update member information</li>
+
+                <li>Deactivate accounts</li>
+
+                <li>Monitor memberships</li>
+
+            </ul>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-user-tie"></i>
+
+            <h3>
+                Employee Management
+            </h3>
+
+            <ul>
+
+                <li>Invite employees</li>
+
+                <li>Assign roles</li>
+
+                <li>Update permissions</li>
+
+                <li>Deactivate employee accounts</li>
+
+            </ul>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-id-card"></i>
+
+            <h3>
+                Membership Plans
+            </h3>
+
+            <ul>
+
+                <li>Create plans</li>
+
+                <li>Modify pricing</li>
+
+                <li>Manage subscriptions</li>
+
+                <li>Track plan usage</li>
+
+            </ul>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            <h3>
+                Reports & Analytics
+            </h3>
+
+            <ul>
+
+                <li>Attendance reports</li>
+
+                <li>Revenue reports</li>
+
+                <li>Membership reports</li>
+
+                <li>Predictive analytics</li>
+
+            </ul>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-qrcode"></i>
+
+            <h3>
+                QR Administration
+            </h3>
+
+            <ul>
+
+                <li>Validate attendance</li>
+
+                <li>Monitor QR activity</li>
+
+                <li>Resolve attendance issues</li>
+
+                <li>Verify member access</li>
+
+            </ul>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-gear"></i>
+
+            <h3>
+                System Settings
+            </h3>
+
+            <ul>
+
+                <li>Configure preferences</li>
+
+                <li>Manage notifications</li>
+
+                <li>Control permissions</li>
+
+                <li>Maintain system policies</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+     FUNCTIONAL PAGES
+========================= -->
+
+<section id="pages">
+
+    <span class="section-tag">
+
+        ADMIN MODULES
+
+    </span>
+
+    <h2>
+
+        Administrative Functional Pages
+
+    </h2>
+
+    <p>
+
+        Administrators use several modules to
+        manage daily gym operations. Each page
+        provides tools designed for specific
+        administrative responsibilities.
+
+    </p>
+
+    <div class="page-grid">
+
+        <div class="page-card">
+
+            <i class="fa-solid fa-gauge"></i>
+
+            <h3>
+                Dashboard
+            </h3>
+
+            <p>
+
+                Displays operational summaries,
+                active memberships, attendance
+                statistics, notifications,
+                and system alerts.
+
+            </p>
+
+        </div>
+
+        <div class="page-card">
+
+            <i class="fa-solid fa-user-clock"></i>
+
+            <h3>
+                Waitlist Management
+            </h3>
+
+            <p>
+
+                Review pending membership
+                applications and approve
+                or reject applicants.
+
+            </p>
+
+        </div>
+
+        <div class="page-card">
+
+            <i class="fa-solid fa-users"></i>
+
+            <h3>
+                Member Management
+            </h3>
+
+            <p>
+
+                View, edit, activate,
+                deactivate, and monitor
+                member accounts.
+
+            </p>
+
+        </div>
+
+        <div class="page-card">
+
+            <i class="fa-solid fa-user-tie"></i>
+
+            <h3>
+                Employee Management
+            </h3>
+
+            <p>
+
+                Invite employees, assign
+                roles, update permissions,
+                and manage staff accounts.
+
+            </p>
+
+        </div>
+
+        <div class="page-card">
+
+            <i class="fa-solid fa-id-card"></i>
+
+            <h3>
+                Membership Plans
+            </h3>
+
+            <p>
+
+                Create, modify, activate,
+                and manage membership
+                subscriptions and plans.
+
+            </p>
+
+        </div>
+
+        <div class="page-card">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h3>
+                Attendance Monitoring
+            </h3>
+
+            <p>
+
+                Track attendance records,
+                gym usage, peak hours,
+                and attendance trends.
+
+            </p>
+
+        </div>
+
+        <div class="page-card">
+
+            <i class="fa-solid fa-qrcode"></i>
+
+            <h3>
+                QR Administration
+            </h3>
+
+            <p>
+
+                Verify attendance scans,
+                validate memberships,
+                and resolve QR issues.
+
+            </p>
+
+        </div>
+
+        <div class="page-card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h3>
+                Reports & Analytics
+            </h3>
+
+            <p>
+
+                Generate attendance,
+                revenue, membership,
+                and operational reports.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+     ADMIN WORKFLOW
+========================= -->
+
+<section id="workflow">
+
+    <span class="section-tag">
+
+        ADMIN PROCESS
+
+    </span>
+
+    <h2>
+
+        Administrator Workflow
+
+    </h2>
+
+    <p class="accordion-note">
+
+        Click a step below to view its explanation.
+
+    </p>
+
+    <div class="accordion">
+
+        <div class="accordion-item">
+
+            <div class="accordion-header">
+
+                <span>1</span>
+
+                Login to GNEX 360
+
+                <div class="accordion-icon">
+                    ▼
+                </div>
+
+            </div>
+
+            <div class="accordion-content">
+
+                <p>
+
+                    Administrators access the
+                    system using authorized
+                    credentials to reach the
+                    administrative dashboard.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+            <div class="accordion-header">
+
+                <span>2</span>
+
+                Review Dashboard
+
+                <div class="accordion-icon">
+                    ▼
+                </div>
+
+            </div>
+
+            <div class="accordion-content">
+
+                <p>
+
+                    Review summary cards,
+                    alerts, attendance
+                    statistics, memberships,
+                    and operational updates.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+            <div class="accordion-header">
+
+                <span>3</span>
+
+                Process Waitlisted Applicants
+
+                <div class="accordion-icon">
+                    ▼
+                </div>
+
+            </div>
+
+            <div class="accordion-content">
+
+                <p>
+
+                    Evaluate pending
+                    membership applications
+                    and approve or reject
+                    submissions.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+            <div class="accordion-header">
+
+                <span>4</span>
+
+                Manage Members
+
+                <div class="accordion-icon">
+                    ▼
+                </div>
+
+            </div>
+
+            <div class="accordion-content">
+
+                <p>
+
+                    Maintain member records,
+                    update information, and
+                    monitor membership status.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+            <div class="accordion-header">
+
+                <span>5</span>
+
+                Manage Employees
+
+                <div class="accordion-icon">
+                    ▼
+                </div>
+
+            </div>
+
+            <div class="accordion-content">
+
+                <p>
+
+                    Invite employees,
+                    assign permissions,
+                    and maintain staff
+                    records.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+            <div class="accordion-header">
+
+                <span>6</span>
+
+                Monitor Attendance
+
+                <div class="accordion-icon">
+                    ▼
+                </div>
+
+            </div>
+
+            <div class="accordion-content">
+
+                <p>
+
+                    Track attendance activity,
+                    validate QR scans, and
+                    monitor gym utilization.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+            <div class="accordion-header">
+
+                <span>7</span>
+
+                Generate Reports
+
+                <div class="accordion-icon">
+                    ▼
+                </div>
+
+            </div>
+
+            <div class="accordion-content">
+
+                <p>
+
+                    Produce operational,
+                    attendance, membership,
+                    and revenue reports.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+     WAITLIST MANAGEMENT
+========================= -->
+
+<section id="waitlist">
+
+    <span class="section-tag">
+
+        MEMBER APPROVALS
+
+    </span>
+
+    <h2>
+
+        Waitlist Management
+
+    </h2>
+
+    <p>
+
+        Membership applications submitted by
+        prospective members are placed in the
+        waitlist module for administrator review.
+        Administrators evaluate each application
+        before approving or rejecting access
+        to the gym.
+
+    </p>
+
+    <div class="accordion">
+
+        <div class="accordion-item">
+
+            <div class="accordion-header">
+
+                <span>1</span>
+
+                Review Submitted Application
+
+                <div class="accordion-icon">▼</div>
+
+            </div>
+
+            <div class="accordion-content">
+
+                <p>
+
+                    Review the applicant's personal
+                    information, selected membership
+                    plan, and registration details.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+            <div class="accordion-header">
+
+                <span>2</span>
+
+                Verify Payment Information
+
+                <div class="accordion-icon">▼</div>
+
+            </div>
+
+            <div class="accordion-content">
+
+                <p>
+
+                    Confirm whether the submitted
+                    payment has been successfully
+                    completed and validated.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+            <div class="accordion-header">
+
+                <span>3</span>
+
+                Approve or Reject Application
+
+                <div class="accordion-icon">▼</div>
+
+            </div>
+
+            <div class="accordion-content">
+
+                <p>
+
+                    Administrators may approve
+                    qualified applicants or reject
+                    applications that do not meet
+                    requirements.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+            <div class="accordion-header">
+
+                <span>4</span>
+
+                Generate Member Account
+
+                <div class="accordion-icon">▼</div>
+
+            </div>
+
+            <div class="accordion-content">
+
+                <p>
+
+                    Once approved, the system
+                    automatically prepares the
+                    member account for activation.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+     MEMBER MANAGEMENT
+========================= -->
+
+<section id="members">
+
+    <span class="section-tag">
+
+        MEMBER RECORDS
+
+    </span>
+
+    <h2>
+
+        Member Management
+
+    </h2>
+
+    <p>
+
+        The Member Management module allows
+        administrators to maintain member
+        accounts, memberships, attendance
+        records, and account status.
+
+    </p>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-user-plus"></i>
+
+            <h3>
+                Create Members
+            </h3>
+
+            <p>
+
+                Add new members manually
+                when necessary.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-user-pen"></i>
+
+            <h3>
+                Update Information
+            </h3>
+
+            <p>
+
+                Modify member records,
+                contact information,
+                and personal details.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-user-slash"></i>
+
+            <h3>
+                Deactivate Accounts
+            </h3>
+
+            <p>
+
+                Disable member access
+                while preserving records.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-address-card"></i>
+
+            <h3>
+                Membership Tracking
+            </h3>
+
+            <p>
+
+                Monitor active plans,
+                renewals, and expiration
+                dates.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+     EMPLOYEE MANAGEMENT
+========================= -->
+
+<section id="employees">
+
+    <span class="section-tag">
+
+        STAFF ADMINISTRATION
+
+    </span>
+
+    <h2>
+
+        Employee Management
+
+    </h2>
+
+    <p>
+
+        Administrators manage employee
+        accounts, staff roles, permissions,
+        and employment status through the
+        Employee Management module.
+
+    </p>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-user-plus"></i>
+
+            <h3>
+                Invite Employee
+            </h3>
+
+            <p>
+
+                Create employee accounts
+                and provide system access
+                to authorized personnel.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-user-gear"></i>
+
+            <h3>
+                Update Employee Roles
+            </h3>
+
+            <p>
+
+                Modify employee permissions
+                and assign operational roles
+                within the system.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-user-lock"></i>
+
+            <h3>
+                Manage Permissions
+            </h3>
+
+            <p>
+
+                Control access to features
+                according to employee
+                responsibilities.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-user-slash"></i>
+
+            <h3>
+                Deactivate Employee Account
+            </h3>
+
+            <p>
+
+                Prevent former employees
+                from accessing the system
+                while retaining records.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+     MEMBERSHIP MANAGEMENT
+========================= -->
+
+<section id="memberships">
+
+    <span class="section-tag">
+
+        SUBSCRIPTION MANAGEMENT
+
+    </span>
+
+    <h2>
+
+        Membership Management
+
+    </h2>
+
+    <p>
+
+        Administrators manage membership plans,
+        monitor subscription status, approve
+        renewals, and maintain pricing information
+        through the Membership Management module.
+
+    </p>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-layer-group"></i>
+
+            <h3>
+                View Membership Plans
+            </h3>
+
+            <p>
+
+                Review all available membership
+                plans currently offered by the gym.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-file-circle-check"></i>
+
+            <h3>
+                Approve Renewals
+            </h3>
+
+            <p>
+
+                Process membership renewal
+                requests submitted by members.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-calendar-days"></i>
+
+            <h3>
+                Monitor Expiration Dates
+            </h3>
+
+            <p>
+
+                Track memberships nearing
+                expiration and renewal deadlines.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-money-bill-wave"></i>
+
+            <h3>
+                Manage Pricing
+            </h3>
+
+            <p>
+
+                Configure membership fees
+                and subscription information.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+     ATTENDANCE MONITORING
+========================= -->
+
+<section id="attendance">
+
+    <span class="section-tag">
+
+        ATTENDANCE ANALYTICS
+
+    </span>
+
+    <h2>
+
+        Attendance Monitoring
+
+    </h2>
+
+    <p>
+
+        Attendance records help administrators
+        monitor member activity, identify peak
+        gym hours, and evaluate facility usage.
+
+    </p>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-users"></i>
+
+            <h3>
+                Daily Attendance
+            </h3>
+
+            <p>
+
+                View all member visits
+                recorded throughout the day.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h3>
+                Peak Hours
+            </h3>
+
+            <p>
+
+                Identify periods with the
+                highest facility usage.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h3>
+                Attendance Trends
+            </h3>
+
+            <p>
+
+                Analyze attendance behavior
+                over specific periods.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            <h3>
+                Attendance Logs
+            </h3>
+
+            <p>
+
+                Review historical attendance
+                records and validations.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+     QR ADMINISTRATION
+========================= -->
+
+<section id="qr">
+
+    <span class="section-tag">
+
+        QR VALIDATION
+
+    </span>
+
+    <h2>
+
+        QR Check-In Administration
+
+    </h2>
+
+    <p>
+
+        QR attendance serves as the primary
+        method for validating gym access and
+        recording attendance automatically.
+
+    </p>
+
+    <div class="accordion">
+
+        <div class="accordion-item">
+
+            <div class="accordion-header">
+
+                <span>1</span>
+
+                Scan Member QR Code
+
+                <div class="accordion-icon">▼</div>
+
+            </div>
+
+            <div class="accordion-content">
+
+                <p>
+
+                    Use the QR scanning feature
+                    to verify member identity
+                    and attendance eligibility.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+            <div class="accordion-header">
+
+                <span>2</span>
+
+                Validate Membership Status
+
+                <div class="accordion-icon">▼</div>
+
+            </div>
+
+            <div class="accordion-content">
+
+                <p>
+
+                    The system verifies whether
+                    the member has an active
+                    membership plan.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+            <div class="accordion-header">
+
+                <span>3</span>
+
+                Record Attendance
+
+                <div class="accordion-icon">▼</div>
+
+            </div>
+
+            <div class="accordion-content">
+
+                <p>
+
+                    Attendance is automatically
+                    logged once validation is
+                    completed successfully.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+            <div class="accordion-header">
+
+                <span>4</span>
+
+                Resolve Attendance Issues
+
+                <div class="accordion-icon">▼</div>
+
+            </div>
+
+            <div class="accordion-content">
+
+                <p>
+
+                    Administrators may investigate
+                    failed scans, expired memberships,
+                    and attendance discrepancies.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+     REPORTS & ANALYTICS
+========================= -->
+
+<section id="reports">
+
+    <span class="section-tag">
+
+        BUSINESS INTELLIGENCE
+
+    </span>
+
+    <h2>
+
+        Reports & Analytics
+
+    </h2>
+
+    <p>
+
+        Administrators can generate reports
+        that support decision-making and
+        operational planning.
+
+    </p>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            <h3>
+                Attendance Reports
+            </h3>
+
+            <p>
+
+                Analyze member attendance
+                and facility utilization.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-coins"></i>
+
+            <h3>
+                Revenue Reports
+            </h3>
+
+            <p>
+
+                Monitor income generated
+                from memberships and services.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-user-group"></i>
+
+            <h3>
+                Membership Reports
+            </h3>
+
+            <p>
+
+                Review membership growth,
+                renewals, and expirations.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h3>
+                Predictive Analytics
+            </h3>
+
+            <p>
+
+                Forecast attendance and
+                membership trends using
+                historical data.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+     SYSTEM SETTINGS
+========================= -->
+
+<section id="settings">
+
+    <span class="section-tag">
+
+        SYSTEM CONFIGURATION
+
+    </span>
+
+    <h2>
+
+        System Settings
+
+    </h2>
+
+    <p>
+
+        The System Settings module allows
+        administrators to configure operational
+        preferences, account policies, and
+        notification settings for GNEX 360.
+
+    </p>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-bell"></i>
+
+            <h3>
+                Notifications
+            </h3>
+
+            <p>
+
+                Configure system-generated
+                alerts and reminders.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-lock"></i>
+
+            <h3>
+                Security Policies
+            </h3>
+
+            <p>
+
+                Manage password requirements
+                and account protection settings.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-building"></i>
+
+            <h3>
+                Gym Information
+            </h3>
+
+            <p>
+
+                Update operational details,
+                contact information, and
+                business settings.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-gear"></i>
+
+            <h3>
+                System Preferences
+            </h3>
+
+            <p>
+
+                Configure default behavior
+                and application settings.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+     RBAC MATRIX
+========================= -->
+
+<section id="rbac">
+
+    <span class="section-tag">
+        ACCESS CONTROL
+    </span>
+
+    <h2>Administrator RBAC Matrix</h2>
+
+    <table class="guide-table">
+
+        <thead>
+
+            <tr>
+                <th>Capability</th>
+                <th>Description</th>
+                <th>Administrator</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>View Dashboard</td>
+                <td>Access operational summaries and statistics.</td>
+                <td>✓</td>
+            </tr>
+
+            <tr>
+                <td>Approve Applications</td>
+                <td>Approve or reject waitlisted members.</td>
+                <td>✓</td>
+            </tr>
+
+            <tr>
+                <td>Manage Members</td>
+                <td>Create, update, deactivate, and reactivate members.</td>
+                <td>✓</td>
+            </tr>
+
+            <tr>
+                <td>Manage Employees</td>
+                <td>Create and update employee accounts.</td>
+                <td>✓</td>
+            </tr>
+
+            <tr>
+                <td>Update Employee Roles</td>
+                <td>Assign and modify employee permissions.</td>
+                <td>✓</td>
+            </tr>
+
+            <tr>
+                <td>Deactivate Accounts</td>
+                <td>Disable member and employee access.</td>
+                <td>✓</td>
+            </tr>
+
+            <tr>
+                <td>Manage Membership Plans</td>
+                <td>Create and maintain membership plans.</td>
+                <td>✓</td>
+            </tr>
+
+            <tr>
+                <td>Monitor Attendance</td>
+                <td>Review attendance logs and records.</td>
+                <td>✓</td>
+            </tr>
+
+            <tr>
+                <td>QR Administration</td>
+                <td>Validate and troubleshoot QR attendance.</td>
+                <td>✓</td>
+            </tr>
+
+            <tr>
+                <td>Generate Reports</td>
+                <td>Create analytics and operational reports.</td>
+                <td>✓</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+</section>
 <script src="guide.js"></script>
 
 </body>
