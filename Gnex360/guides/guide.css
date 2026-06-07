@@ -9,19 +9,28 @@
 }
 
 :root{
+
     --primary:#ff3333;
-    --primary-light:rgba(255,51,51,.1);
+
+    --primary-red:#ff3333;
+
+    --primary-light:
+    rgba(255,51,51,.1);
 
     --bg:#0a0a0a;
+
     --card:#141414;
+
     --card-hover:#1a1a1a;
 
     --border:#262626;
 
     --text:#ffffff;
+
     --text-secondary:#b3b3b3;
 
     --radius:18px;
+
 }
 
 html{
@@ -472,6 +481,14 @@ body{
     border-radius:14px;
 
     overflow:hidden;
+
+    transition:.3s;
+}
+
+.accordion-item:hover{
+
+    border-color:
+    rgba(255,51,51,.35);
 }
 
 .accordion-header{
@@ -604,4 +621,434 @@ body{
         padding:25px;
     }
 
+}
+/* ====================================
+   ACCORDION IMPROVEMENTS
+==================================== */
+
+.accordion-note{
+
+    color:var(--text-secondary);
+
+    margin-top:10px;
+
+    margin-bottom:20px;
+
+    font-size:15px;
+}
+
+.accordion-header{
+
+    transition:.3s;
+}
+
+.accordion-header:hover{
+
+    background:
+    rgba(255,51,51,.05);
+}
+
+.accordion-icon{
+
+    margin-left:auto;
+
+    color:var(--primary);
+
+    font-size:14px;
+
+    transition:.3s;
+}
+
+.accordion-item.active
+.accordion-icon{
+
+    transform:
+    rotate(180deg);
+}
+
+.accordion-item.active
+.accordion-content{
+
+    max-height:800px;
+}
+
+/* ====================================
+   FAQ ACCORDION
+==================================== */
+
+#faq .accordion-header span{
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-weight:700;
+
+    flex-shrink:0;
+}
+
+/* ====================================
+   FEATURE CARD ENHANCEMENTS
+==================================== */
+
+.feature-card:hover{
+
+    transform:
+    translateY(-6px);
+
+    border-color:
+    rgba(255,51,51,.4);
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.25);
+}
+
+.feature-card i{
+
+    display:block;
+
+    font-size:28px;
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+}
+
+/* ====================================
+   TABLE IMPROVEMENTS
+==================================== */
+
+.guide-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:25px;
+}
+
+.guide-table tbody tr{
+
+    transition:.3s;
+}
+
+.guide-table tbody tr:hover{
+
+    background:
+    rgba(255,255,255,.03);
+}
+
+/* ====================================
+   GUIDE FOOTER
+==================================== */
+
+.guide-footer{
+
+    text-align:center;
+
+    padding:60px 40px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,51,51,.08),
+        rgba(255,51,51,.02)
+    );
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+}
+
+.guide-footer h2{
+
+    margin-bottom:15px;
+}
+
+.guide-footer p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:var(--text-secondary);
+}
+
+/* ====================================
+   BACK TO TOP BUTTON
+==================================== */
+
+.back-to-top{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:50px;
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:999;
+}
+
+.back-to-top.show{
+
+    opacity:1;
+
+    visibility:visible;
+}
+
+.back-to-top:hover{
+
+    transform:
+    translateY(-4px);
+}
+/* =========================
+   GUIDE FOOTER
+========================= */
+
+.guide-footer{
+
+    text-align:center;
+
+    padding:60px 40px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,51,51,.08),
+        rgba(255,51,51,.02)
+    );
+
+    border:
+    1px solid var(--border);
+
+    border-radius:20px;
+}
+
+.guide-footer h2{
+
+    margin-bottom:15px;
+}
+
+.guide-footer p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:var(--text-secondary);
+}
+
+/* =========================
+   ACCORDION ICON
+========================= */
+
+.accordion-icon{
+
+    margin-left:auto;
+
+    transition:.3s;
+
+    color:var(--primary-red);
+
+    font-size:14px;
+}
+
+.accordion-item.active
+.accordion-icon{
+
+    transform:
+    rotate(180deg);
+}
+
+/* =========================
+   SECTION TAG
+========================= */
+
+.section-tag{
+
+    display:inline-block;
+
+    background:
+    rgba(255,51,51,.08);
+
+    color:var(--primary-red);
+
+    border:
+    1px solid rgba(255,51,51,.2);
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    margin-bottom:15px;
+}
+
+/* =========================
+   BACK TO TOP BUTTON
+========================= */
+
+.back-to-top{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:50px;
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--primary-red);
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.3);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:999;
+}
+
+.back-to-top.show{
+
+    opacity:1;
+
+    visibility:visible;
+}
+
+.back-to-top:hover{
+
+    transform:
+    translateY(-4px);
+}
+
+/* =========================
+   ADMIN RESPONSIBILITY CARDS
+========================= */
+
+.feature-card i{
+
+    display:block;
+
+    font-size:28px;
+
+    color:var(--primary-red);
+
+    margin-bottom:15px;
+}
+
+.feature-card ul{
+
+    margin-top:12px;
+
+    padding-left:20px;
+
+    color:var(--text-secondary);
+}
+
+.feature-card li{
+
+    margin-bottom:6px;
+}
+
+/* =========================
+   TABLE IMPROVEMENTS
+========================= */
+
+.guide-table{
+
+    margin-top:25px;
+
+    overflow:hidden;
+
+    border-radius:12px;
+}
+
+.guide-table tbody tr:hover{
+
+    background:
+    rgba(255,255,255,.03);
+}
+/* =========================
+   FAQ ACCORDION
+========================= */
+
+#faq .accordion-header span{
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-weight:700;
+
+    flex-shrink:0;
+}
+
+#faq .accordion-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
 }
