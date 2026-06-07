@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GNEX 360 - System Manual</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Logo Section -->
+            <div class="logo-section">
+                <div class="logo-container">
+                    <img src="https://scontent.fmnl37-1.fna.fbcdn.net/v/t39.30808-6/274223784_134055269112617_564558997834170197_n.jpg?stp=dst-jpg_s552x414_tt6&_nc_cat=106&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeH3080H6c5a3eDKCH5z92EjWCpE5s9rPWRYKkTmz2s9ZCOV8AfojFHNvd81V0Xsh3YiDcoR2TvLpy9w9RnrKE6u&_nc_ohc=WpqHbt-pTloQ7kNvwGvZFoF&_nc_oc=AdqAHg1-_pejl3LGb_GkeNPD6ACOFh6kgPyV4IxXcHuhJ8oRmQb_7lHNhnO4PVf3rjY&_nc_zt=23&_nc_ht=scontent.fmnl37-1.fna&_nc_gid=y3ad-XZBX6ON-wD6HbSf5A&_nc_ss=7b2a8&oh=00_Af-70VdRPmS4MPUmzSLh8bioOigJ4PVKL8dpC4LrlKVVaA&oe=6A213E15" alt="GNEX 360" class="logo">
+                </div>
+                <h1 class="logo-text">GNEX 360</h1>
+                <div class="divider"></div>
+                <p class="subtitle">SYSTEM MANUAL</p>
+            </div>
+
+            <!-- Search -->
+            <div class="search-box">
+                <input type="text" placeholder="Search manual..." id="searchInput">
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="nav-menu">
+                <a href="#introduction" class="nav-item active">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    <span class="label">INTRODUCTION</span>
+                </a>
+                <a href="#capabilities" class="nav-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"></path>
+                    </svg>
+                    <span class="label">SYSTEM CAPABILITIES</span>
+                </a>
+                <a href="#for-members" class="nav-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span class="label">FOR MEMBERS</span>
+                </a>
+                <a href="#for-admins" class="nav-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span class="label">FOR ADMINS</span>
+                </a>
+                <a href="#for-coaches" class="nav-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                        <line x1="9" y1="9" x2="9" y2="9.01"></line>
+                        <line x1="15" y1="9" x2="15" y2="9.01"></line>
+                    </svg>
+                    <span class="label">FOR COACHES</span>
+                </a>
+                <a href="#modules" class="nav-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                    <span class="label">SYSTEM MODULES</span>
+                </a>
+                <a href="#about" class="nav-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    <span class="label">ABOUT</span>
+                </a>
+                <a href="#hierarchy" class="nav-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L22 7v10c0 5.55-4.03 10.35-9 10.94-4.97-.59-9-5.39-9-10.94V7l10-5z"></path>
+                        <line x1="12" y1="12" x2="12" y2="16"></line>
+                    </svg>
+                    <span class="label">ACCOUNT HIERARCHY</span>
+                </a>
+                <a href="#faq" class="nav-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 16v-4"></path>
+                        <path d="M12 8h.01"></path>
+                    </svg>
+                    <span class="label">FAQ</span>
+                </a>
+                <a href="#contributors" class="nav-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-5-3.87"></path>
+                        <path d="M9 21v-2a4 4 0 0 1 .764-2.558"></path>
+                        <circle cx="16.5" cy="7.5" r="2.5"></circle>
+                        <circle cx="9" cy="7" r="2.5"></circle>
+                    </svg>
+                    <span class="label">CONTRIBUTORS</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Introduction Section -->
+            <section class="content-section" id="introduction">
+                <div class="hero-banner">
+                    <h1>Welcome to GNEX 360</h1>
+                    <p>Gym Member Management & Analytics Platform Manual</p>
+                </div>
+
+                <div class="content-wrapper">
+                    <h2>System Overview</h2>
+                    <p>GNEX 360 is a comprehensive gym member management and analytics platform designed for Philippine fitness centers. It provides tools for member management, attendance tracking, class scheduling, payments, and AI-powered predictive analytics.</p>
+                    
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            <h3>Member Management</h3>
+                            <p>Create and manage member profiles with role-based access control</p>
+                        </div>
+                        <div class="feature-card">
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v4"></path>
+                            </svg>
+                            <h3>QR Check-In</h3>
+                            <p>Fast attendance tracking using QR code technology</p>
+                        </div>
+                        <div class="feature-card">
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11H7.82a2 2 0 0 0-1.97 1.63l-1.5 8A2 2 0 0 0 4.37 23h15.26a2 2 0 0 0 1.97-2.37l-1.5-8A2 2 0 0 0 16.18 11H15m0 0V6a2 2 0 1 0-4 0v5m0 0V6a2 2 0 1 0-4 0v5"></path>
+                            </svg>
+                            <h3>Membership Plans</h3>
+                            <p>Flexible membership plan management and billing</p>
+                        </div>
+                        <div class="feature-card">
+                            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <polyline points="19 12 12 19 5 12"></polyline>
+                            </svg>
+                            <h3>Analytics</h3>
+                            <p>AI-powered predictive analytics and reporting</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Capabilities Section -->
+            <section class="content-section" id="capabilities">
+                <div class="content-wrapper">
+                    <h2>System Capabilities</h2>
+                    <p>GNEX 360 is built with comprehensive features to manage the full gym lifecycle.</p>
+                    
+                    <div class="capabilities-grid">
+                        <div class="capability-card">
+                            <div class="capability-header">
+                                <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </div>
+                            <h3>Member Management</h3>
+                            <p>Create and manage a full hierarchy of member accounts with role-based access control.</p>
+                            <div>
+                                <a href="docs/member-management.html" class="view-docs-btn">View Docs -></a>
+                            </div>
+                        </div>
+                        <div class="capability-card">
+                            <div class="capability-header">
+                                <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v4"></path>
+                                </svg>
+                            </div>
+                            <h3>QR Check-In System</h3>
+                            <p>Fast and efficient attendance tracking using QR codes.</p>
+                            <div>
+                                <a href="docs/qr-checkin.html" class="view-docs-btn">View Docs -></a>
+                            </div>
+                        </div>
+                        <div class="capability-card">
+                            <div class="capability-header">
+                                <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M19 11H5m14 0a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2m14 0V9a2 2 0 0 0-2-2M5 11V9a2 2 0 0 1 2-2m0 0V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2M7 7h10"></path>
+                                </svg>
+                            </div>
+                            <h3>Scheduling</h3>
+                            <p>Manage class schedules and trainer availability.</p>
+                            <div>
+                                <a href="docs/scheduling.html" class="view-docs-btn">View Docs -></a>
+                            </div>
+                        </div>
+                        <div class="capability-card">
+                            <div class="capability-header">
+                                <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <polyline points="19 12 12 19 5 12"></polyline>
+                                </svg>
+                            </div>
+                            <h3>Analytics & Reports</h3>
+                            <p>Comprehensive reporting with predictive analytics.</p>
+                            <div>
+                                <a href="docs/analytics-reports.html" class="view-docs-btn">View Docs -></a>
+                            </div>
+                        </div>
+                        <div class="capability-card">
+                            <div class="capability-header">
+                                <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                    <path d="M1 10h22"></path>
+                                </svg>
+                            </div>
+                            <h3>Payment Processing</h3>
+                            <p>Secure payment integration for memberships and services.</p>
+                            <div>
+                                <a href="docs/payment-processing.html" class="view-docs-btn">View Docs -></a>
+                            </div>
+                        </div>
+                        <div class="capability-card">
+                            <div class="capability-header">
+                                <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            <h3>RBAC & Security</h3>
+                            <p>Role-based access control with granular permissions.</p>
+                            <div>
+                                <a href="docs/rbac-security.html" class="view-docs-btn">View Docs -></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- For Members Section -->
+            <section class="content-section" id="for-members">
+
+    <div class="content-wrapper">
+
+        <h2>For Members</h2>
+
+        <p>
+            Learn how to register, activate memberships,
+            access QR check-in, manage payments,
+            and track attendance.
+        </p>
+
+        <div class="workflow-steps">
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Register</h3>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Approval</h3>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>QR Access</h3>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Gym Check-In</h3>
+            </div>
+
+        </div>
+
+        <a href="guides/member-guide.html"
+           class="view-docs-btn">
+            Open Member Guide →
+        </a>
+
+    </div>
+
+</section>
+
+            <!-- For Admins Section -->
+            <section class="content-section" id="for-admins">
+                <div class="content-wrapper">
+                    <h2>For Administrators</h2>
+                    <p>Administrators oversee system operations including resource management, approvals, member management, and reporting.</p>
+                    <p style="margin-top: 1rem;">Key responsibilities include:</p>
+                    <ul class="admin-list">
+                        <li>Manage member accounts and permissions</li>
+                        <li>Approve membership requests and payments</li>
+                        <li>Oversee class scheduling and coach assignments</li>
+                        <li>Generate reports and analytics</li>
+                        <li>Manage system settings and security</li>
+                    </ul>
+                </div>
+                <a href="guides/admin-guide.html"
+   class="view-docs-btn">
+    Open Administrator Guide →
+</a>
+            </section>
+
+            <!-- For Coaches Section -->
+            <section class="content-section" id="for-coaches">
+                <div class="content-wrapper">
+                    <h2>For Coaches</h2>
+                    <p>Coaches can manage their schedules, track member progress, and communicate with members through GNEX 360.</p>
+                    <p style="margin-top: 1rem;">Coach features include:</p>
+                    <ul class="coach-list">
+                        <li>View and manage assigned classes</li>
+                        <li>Track member attendance</li>
+                        <li>Record member progress</li>
+                        <li>Communicate with members</li>
+                    </ul>
+                </div>
+                <a href="guides/coach-guide.html"
+   class="view-docs-btn">
+    Open Coach Guide →
+</a>
+            </section>
+
+            <!-- Modules Section -->
+            <section class="content-section" id="modules">
+                <div class="content-wrapper">
+                    <h2>System Modules</h2>
+                    <p>GNEX 360 consists of modular components that work together seamlessly.</p>
+                    
+                    <div class="modules-grid">
+                        <div class="module-card">
+                            <h3>Members Module</h3>
+                            <p>Manage member profiles, account creation, and member lifecycle.</p>
+                            <span class="module-type">CORE</span>
+                        </div>
+                        <div class="module-card">
+                            <h3>Employees Module</h3>
+                            <p>Manage coaches and staff with role-based permissions.</p>
+                            <span class="module-type">ADMIN</span>
+                        </div>
+                        <div class="module-card">
+                            <h3>Memberships Module</h3>
+                            <p>Create and manage membership plans and subscriptions.</p>
+                            <span class="module-type">BILLING</span>
+                        </div>
+                        <div class="module-card">
+                            <h3>Attendance Module</h3>
+                            <p>Track member check-ins and attendance history.</p>
+                            <span class="module-type">TRACKING</span>
+                        </div>
+                        <div class="module-card">
+                            <h3>Analytics Module</h3>
+                            <p>Generate reports and predictive analytics.</p>
+                            <span class="module-type">INSIGHTS</span>
+                        </div>
+                        <div class="module-card">
+                            <h3>Payments Module</h3>
+                            <p>Process payments and manage billing.</p>
+                            <span class="module-type">PAYMENTS</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="content-section" id="about">
+                <div class="content-wrapper">
+                    <h2>About GNEX 360</h2>
+                    
+                    <div class="about-section">
+                        <h3>System Purpose</h3>
+                        <p>GNEX 360 is designed to bring structure, accountability, and clarity to how fitness centers manage members, staff, and resources. It replaces fragmented manual processes with a unified, professional platform.</p>
+                    </div>
+
+                    <div class="about-section">
+                        <h3>Who It Serves</h3>
+                        <p>GNEX 360 supports fitness center operators, coaches, and members by providing clear workflows for member registration, attendance tracking, scheduling, and analytics-driven insights.</p>
+                    </div>
+
+                    <div class="about-section">
+                        <h3>Guiding Principles</h3>
+                        <ul>
+                            <li>Simplified member workflows</li>
+                            <li>Role-based access and accountability</li>
+                            <li>Transparent approval and tracking mechanisms</li>
+                            <li>Comprehensive analytics and reporting</li>
+                            <li>Security and data protection</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Account Hierarchy Section -->
+            <section class="content-section" id="hierarchy">
+                <div class="content-wrapper">
+                    <h2>Account Hierarchy</h2>
+                    <p>GNEX 360 follows a role-based hierarchy with defined access levels and permissions.</p>
+                    
+                    <div class="hierarchy-cards">
+                        <div class="hierarchy-card">
+                            <h3>Super Admin</h3>
+                            <p>System-wide access and configuration</p>
+                        </div>
+                        <div class="hierarchy-card">
+                            <h3>Admin</h3>
+                            <p>Gym operations and member management</p>
+                        </div>
+                        <div class="hierarchy-card">
+                            <h3>Coach</h3>
+                            <p>Class scheduling and member tracking</p>
+                        </div>
+                        <div class="hierarchy-card">
+                            <h3>Member</h3>
+                            <p>Personal account and membership management</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="content-section" id="faq">
+                <div class="content-wrapper">
+                    <h2>Frequently Asked Questions</h2>
+                    
+                    <div class="faq-section">
+                        <h3>For Members</h3>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-number">01</span>
+                                <span>How do I register as a member?</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Visit the gym or use the GNEX 360 app to create an account. An administrator will verify your details and activate your membership.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-number">02</span>
+                                <span>Can I change my membership plan?</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, you can request a plan change through your account. An administrator will review and approve the change.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-number">03</span>
+                                <span>How does QR check-in work?</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Simply scan the gym's QR code at check-in using the GNEX 360 app or a standard QR scanner. Your attendance will be automatically recorded.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-number">04</span>
+                                <span>Where can I view my progress?</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Your attendance history, progress tracking, and analytics are available in your member dashboard.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-section">
+                        <h3>For Administrators</h3>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-number">01</span>
+                                <span>How do I approve member registrations?</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Navigate to the Approvals section in your admin dashboard. Review pending registrations and click Approve or Reject.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-number">02</span>
+                                <span>Can I generate attendance reports?</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, the Reports module provides customizable attendance reports, member analytics, and billing summaries.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-number">03</span>
+                                <span>How do I manage coaches?</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Use the Employees module to add, edit, and manage coaches. Assign them to classes and set their permissions.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-number">04</span>
+                                <span>Is member data secure?</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, GNEX 360 uses role-based access control, encryption, and follows security best practices to protect member data.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contributors Section -->
+            <section class="content-section" id="contributors">
+                <div class="content-wrapper">
+                    <h2>Our Team</h2>
+                    <p>The team behind GNEX 360</p>
+                    
+                    <div class="contributors-grid">
+                        <div class="contributor-card">
+                            <div class="contributor-avatar">AD</div>
+                            <h3>Adrian Aldave</h3>
+                            <p>Project Manager <br> Developer
+                            </p>
+                        </div>
+                        <div class="contributor-card">
+                            <div class="contributor-avatar">KA</div>
+                            <h3>Karmelo Andrei Cortes</h3>
+                            <p>Full-stack Developer</p>
+                        </div>
+                        <div class="contributor-card">
+                            <div class="contributor-avatar">PM</div>
+                            <h3>Phol Mari Garcia</h3>
+                            <p>QA Specialist</p>
+                        </div>
+                        <div class="contributor-card">
+                            <div class="contributor-avatar">DC</div>
+                            <h3>Dawn Carla Germones</h3>
+                            <p>Documentation</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>&copy; 2026 GNEX 360. All rights reserved.</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

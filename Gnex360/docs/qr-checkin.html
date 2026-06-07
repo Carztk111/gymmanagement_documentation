@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Check-In System | GNEX 360</title>
+    <link rel="stylesheet" href="docs.css">
+</head>
+
+<body>
+
+<div class="member-docs-wrapper">
+
+    <section class="member-docs-header">
+
+        <a href="../index.html#capabilities"
+           class="member-back-button">
+            ← Back to System Capabilities
+        </a>
+
+        <span class="member-docs-tag">
+            QR CHECK-IN SYSTEM
+        </span>
+
+        <h1>QR Check-In System</h1>
+
+        <p>
+            The QR Check-In System provides fast and secure attendance
+            tracking for gym members. It validates membership status,
+            records attendance logs, and automatically updates
+            member activity records and reports.
+        </p>
+
+    </section>
+
+    <div class="member-docs-layout">
+
+        <!-- SIDEBAR -->
+
+        <aside class="member-docs-sidebar">
+
+            <h3>ON THIS PAGE</h3>
+
+            <nav class="member-docs-nav">
+
+                <a href="#overview" class="member-docs-link">
+                    Overview
+                </a>
+
+                <a href="#lifecycle" class="member-docs-link">
+                    Attendance Lifecycle
+                </a>
+
+                <a href="#scanner" class="member-docs-link">
+                    Scanner Module
+                </a>
+
+                <a href="#validation" class="member-docs-link">
+                    Membership Validation
+                </a>
+
+                <a href="#attendance" class="member-docs-link">
+                    Attendance Logs
+                </a>
+
+                <a href="#errors" class="member-docs-link">
+                    Error Handling
+                </a>
+
+                <a href="#reports" class="member-docs-link">
+                    Reports & Analytics
+                </a>
+
+                <a href="#permissions" class="member-docs-link">
+                    Permissions
+                </a>
+
+            </nav>
+
+        </aside>
+
+        <!-- CONTENT -->
+
+        <main class="member-docs-content">
+
+            <section id="overview">
+
+                <h2>Overview</h2>
+
+                <p>
+                    The QR Check-In System is responsible for recording
+                    gym attendance through QR code scanning. Each member
+                    receives a unique QR code that serves as their digital
+                    identification when entering the facility.
+                </p>
+
+                <p>
+                    The module works together with Member Management,
+                    Membership Validation, Analytics, and Reporting
+                    components to ensure accurate attendance records.
+                </p>
+
+            </section>
+
+            <section id="lifecycle">
+
+                <h2>Attendance Lifecycle</h2>
+
+                <p>
+                    The following workflow describes the complete
+                    attendance process from member arrival until
+                    attendance data becomes available in reports.
+                </p>
+
+                <div class="member-lifecycle">
+
+                    <div class="member-step">
+                        Member Arrives at Gym
+                    </div>
+
+                    <div class="member-arrow">↓</div>
+
+                    <div class="member-step">
+                        QR Code Presented
+                    </div>
+
+                    <div class="member-arrow">↓</div>
+
+                    <div class="member-step">
+                        QR Code Scanned
+                    </div>
+
+                    <div class="member-arrow">↓</div>
+
+                    <div class="member-step">
+                        Membership Validated
+                    </div>
+
+                    <div class="member-arrow">↓</div>
+
+                    <div class="member-step">
+                        Attendance Recorded
+                    </div>
+
+                    <div class="member-arrow">↓</div>
+
+                    <div class="member-step">
+                        Activity Log Updated
+                    </div>
+
+                    <div class="member-arrow">↓</div>
+
+                    <div class="member-step">
+                        Reports & Analytics Updated
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="scanner">
+
+                <h2>Scanner Module</h2>
+
+                <div class="member-feature-grid">
+
+                    <div class="member-feature-card">
+                        <h3>QR Reader</h3>
+                        <p>
+                            Reads member QR codes using a scanner
+                            device or camera interface.
+                        </p>
+                    </div>
+
+                    <div class="member-feature-card">
+                        <h3>Real-Time Processing</h3>
+                        <p>
+                            Attendance is recorded immediately
+                            after successful validation.
+                        </p>
+                    </div>
+
+                    <div class="member-feature-card">
+                        <h3>Fast Check-In</h3>
+                        <p>
+                            Reduces manual attendance tracking
+                            and minimizes waiting time.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="validation">
+
+                <h2>Membership Validation</h2>
+
+                <p>
+                    Before attendance is recorded, the system validates
+                    the member account and membership status.
+                </p>
+
+                <table class="member-table">
+
+                    <thead>
+                        <tr>
+                            <th>Validation Check</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>QR Exists</td>
+                            <td>Ensures QR code belongs to a registered member.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Account Active</td>
+                            <td>Confirms member account is not disabled.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Membership Valid</td>
+                            <td>Checks membership expiration date.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Duplicate Prevention</td>
+                            <td>Prevents multiple attendance entries.</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+            <section id="attendance">
+
+                <h2>Attendance Logs</h2>
+
+                <p>
+                    Every successful scan generates an attendance record.
+                </p>
+
+                <table class="member-table">
+
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Member Name</td>
+                            <td>Member associated with the QR code.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Date</td>
+                            <td>Date of attendance.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Time In</td>
+                            <td>Check-in timestamp.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Status</td>
+                            <td>Successful or rejected attendance.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Validation Result</td>
+                            <td>Membership verification outcome.</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+            <section id="errors">
+
+                <h2>Error Handling</h2>
+
+                <div class="member-feature-grid">
+
+                    <div class="member-feature-card">
+                        <h3>Invalid QR Code</h3>
+                        <p>
+                            QR code does not belong to any registered member.
+                        </p>
+                    </div>
+
+                    <div class="member-feature-card">
+                        <h3>Expired Membership</h3>
+                        <p>
+                            Attendance is rejected if membership has expired.
+                        </p>
+                    </div>
+
+                    <div class="member-feature-card">
+                        <h3>Inactive Account</h3>
+                        <p>
+                            Disabled members cannot check in.
+                        </p>
+                    </div>
+
+                    <div class="member-feature-card">
+                        <h3>Duplicate Scan</h3>
+                        <p>
+                            Prevents repeated attendance entries.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="reports">
+
+                <h2>Reports & Analytics</h2>
+
+                <div class="member-feature-grid">
+
+                    <div class="member-feature-card">
+                        <h3>Daily Attendance Report</h3>
+                        <p>
+                            Shows all attendance records for a selected day.
+                        </p>
+                    </div>
+
+                    <div class="member-feature-card">
+                        <h3>Member Attendance History</h3>
+                        <p>
+                            Displays attendance trends for each member.
+                        </p>
+                    </div>
+
+                    <div class="member-feature-card">
+                        <h3>Peak Hours Analysis</h3>
+                        <p>
+                            Identifies high-traffic gym hours.
+                        </p>
+                    </div>
+
+                    <div class="member-feature-card">
+                        <h3>Attendance Summary</h3>
+                        <p>
+                            Provides attendance totals and trends.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="permissions">
+
+                <h2>Role Permissions</h2>
+
+                <table class="member-table">
+
+                    <thead>
+                        <tr>
+                            <th>Function</th>
+                            <th>Owner</th>
+                            <th>Staff</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Scan QR Codes</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+
+                        <tr>
+                            <td>View Attendance Logs</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+
+                        <tr>
+                            <td>Generate Reports</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+
+                        <tr>
+                            <td>Delete Attendance Records</td>
+                            <td>✓</td>
+                            <td>✕</td>
+                        </tr>
+
+                        <tr>
+                            <td>Manage Scanner Settings</td>
+                            <td>✓</td>
+                            <td>✕</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</div>
+
+<script src="docs.js"></script>
+
+</body>
+</html>
