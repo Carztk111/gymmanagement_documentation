@@ -26,14 +26,15 @@
         <h1>Member Management</h1>
 
         <p>
-            Manage the complete member lifecycle including applications,
-            registrations, memberships, attendance, violations,
-            transactions, and account access.
+            Comprehensive documentation for managing gym members throughout
+            their lifecycle including applications, registrations, memberships,
+            attendance tracking, payments, violations, account status, and
+            administrative actions.
         </p>
 
     </section>
 
-    <!-- LAYOUT -->
+    <!-- MAIN LAYOUT -->
 
     <div class="member-docs-layout">
 
@@ -45,9 +46,7 @@
 
             <nav class="member-docs-nav">
 
-                <a href="#overview" class="member-docs-link">
-                    Overview
-                </a>
+                <a href="#overview" class="member-docs-link">Overview</a>
 
                 <a href="#directory" class="member-docs-link">
                     Member Directory
@@ -55,6 +54,10 @@
 
                 <a href="#waitlist" class="member-docs-link">
                     Waitlist Management
+                </a>
+
+                <a href="#waitlist-actions" class="member-docs-link">
+                    Waitlist Actions
                 </a>
 
                 <a href="#profiles" class="member-docs-link">
@@ -77,8 +80,12 @@
                     Account Deactivation
                 </a>
 
+                <a href="#audit" class="member-docs-link">
+                    Audit Trail
+                </a>
+
                 <a href="#permissions" class="member-docs-link">
-                    Permissions
+                    Role Permissions
                 </a>
 
             </nav>
@@ -89,27 +96,33 @@
 
         <main class="member-docs-content">
 
+            <!-- OVERVIEW -->
+
             <section id="overview">
 
                 <h2>Overview</h2>
 
                 <p>
-                    The Member Management module serves as the central hub
-                    for managing gym members throughout their lifecycle.
-                    Administrators can approve applications, manage
-                    profiles, monitor memberships, review attendance,
-                    track transactions, and enforce member policies.
+                    The Member Management module is the central repository
+                    for all member-related information within GNEX 360.
+                    It allows gym administrators and staff to manage
+                    memberships, review applications, monitor attendance,
+                    track transactions, review violations, and control
+                    account access throughout the member lifecycle.
                 </p>
 
             </section>
+
+            <!-- DIRECTORY -->
 
             <section id="directory">
 
                 <h2>Member Directory</h2>
 
                 <p>
-                    The Member Directory provides a searchable and
-                    filterable table containing all registered members.
+                    The Member Directory provides a searchable and filterable
+                    list of all registered members. Administrators can quickly
+                    locate member records and access detailed profile information.
                 </p>
 
                 <table class="member-table">
@@ -124,33 +137,33 @@
                     <tbody>
 
                         <tr>
-                            <td>Member Name</td>
-                            <td>Primary member identifier.</td>
+                            <td>Member ID</td>
+                            <td>Unique system-generated identifier.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Full Name</td>
+                            <td>Registered member name.</td>
                         </tr>
 
                         <tr>
                             <td>Email Address</td>
-                            <td>Login and communication channel.</td>
+                            <td>Login and communication credential.</td>
                         </tr>
 
                         <tr>
-                            <td>Phone Number</td>
-                            <td>Member contact information.</td>
-                        </tr>
-
-                        <tr>
-                            <td>Address</td>
-                            <td>Residential information.</td>
+                            <td>Contact Number</td>
+                            <td>Primary contact information.</td>
                         </tr>
 
                         <tr>
                             <td>Membership Plan</td>
-                            <td>Current active subscription.</td>
+                            <td>Current subscribed membership package.</td>
                         </tr>
 
                         <tr>
                             <td>Status</td>
-                            <td>Active, Expired or Inactive.</td>
+                            <td>Active, Expired, Suspended, or Inactive.</td>
                         </tr>
 
                     </tbody>
@@ -159,13 +172,16 @@
 
             </section>
 
+            <!-- WAITLIST -->
+
             <section id="waitlist">
 
                 <h2>Waitlist Management</h2>
 
                 <p>
-                    Prospective members enter the waitlist before
-                    becoming active members.
+                    New applicants enter the waitlist before becoming
+                    registered gym members. Administrators can review,
+                    approve, or reject submitted applications.
                 </p>
 
                 <div class="member-lifecycle">
@@ -177,13 +193,13 @@
                     <div class="member-arrow">↓</div>
 
                     <div class="member-step">
-                        Staff Review
+                        Waitlist Review
                     </div>
 
                     <div class="member-arrow">↓</div>
 
                     <div class="member-step">
-                        Approve / Reject
+                        Approval / Rejection
                     </div>
 
                     <div class="member-arrow">↓</div>
@@ -202,155 +218,297 @@
 
             </section>
 
-            <section id="profiles">
+            <!-- WAITLIST ACTIONS -->
 
-                <h2>Member Profiles</h2>
+            <section id="waitlist-actions">
+
+                <h2>Waitlist Actions</h2>
+
+                <p>
+                    Based on the QA-tested workflows, administrators
+                    can perform multiple actions on waitlisted applicants.
+                </p>
 
                 <div class="member-feature-grid">
 
                     <div class="member-feature-card">
-                        <h3>Personal Information</h3>
+
+                        <h3>View Requestor</h3>
+
                         <p>
-                            Full name, address, city,
-                            date of birth and contact details.
+                            Review applicant information including
+                            personal details, emergency contact
+                            information, and selected membership plan.
                         </p>
+
                     </div>
 
                     <div class="member-feature-card">
-                        <h3>Emergency Contact</h3>
+
+                        <h3>Update Requestor</h3>
+
                         <p>
-                            Emergency contact name,
-                            relationship and phone number.
+                            Modify applicant information before
+                            approval or account creation.
                         </p>
+
                     </div>
 
                     <div class="member-feature-card">
-                        <h3>Membership Information</h3>
+
+                        <h3>Approve Requestor</h3>
+
                         <p>
-                            Active subscription,
-                            expiry date and status.
+                            Convert approved applicants into
+                            active member accounts.
                         </p>
+
                     </div>
 
                     <div class="member-feature-card">
-                        <h3>Activity Records</h3>
+
+                        <h3>Reject Requestor</h3>
+
                         <p>
-                            Attendance history,
-                            payments and violations.
+                            Deny applications and record the
+                            reason for rejection.
                         </p>
+
                     </div>
 
                 </div>
 
             </section>
+
+            <!-- PROFILES -->
+
+            <section id="profiles">
+
+                <h2>Member Profiles</h2>
+
+                <p>
+                    Each member profile stores complete personal,
+                    membership, attendance, and account information.
+                </p>
+
+                <div class="member-feature-grid">
+
+                    <div class="member-feature-card">
+
+                        <h3>Personal Information</h3>
+
+                        <p>
+                            Name, birthday, address,
+                            gender, and contact details.
+                        </p>
+
+                    </div>
+
+                    <div class="member-feature-card">
+
+                        <h3>Emergency Contact</h3>
+
+                        <p>
+                            Emergency contact person,
+                            relationship, and phone number.
+                        </p>
+
+                    </div>
+
+                    <div class="member-feature-card">
+
+                        <h3>Membership Details</h3>
+
+                        <p>
+                            Active plan, start date,
+                            expiration date, and status.
+                        </p>
+
+                    </div>
+
+                    <div class="member-feature-card">
+
+                        <h3>Account History</h3>
+
+                        <p>
+                            Attendance logs, transactions,
+                            violations, and account activity.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ATTENDANCE -->
 
             <section id="attendance">
 
                 <h2>Attendance Tracking</h2>
 
                 <p>
-                    Attendance is automatically recorded through
-                    the GNEX 360 QR Check-In System.
+                    Attendance records are automatically generated
+                    through the QR Check-In System and synchronized
+                    with reporting modules.
                 </p>
 
                 <div class="member-feature-grid">
 
                     <div class="member-feature-card">
+
                         <h3>QR Validation</h3>
+
                         <p>
-                            Verify active membership
-                            before check-in.
+                            Membership status is validated
+                            before attendance is recorded.
                         </p>
+
                     </div>
 
                     <div class="member-feature-card">
+
                         <h3>Attendance Logs</h3>
+
                         <p>
-                            Store complete check-in history.
+                            Stores complete check-in
+                            and activity history.
                         </p>
+
                     </div>
 
                     <div class="member-feature-card">
+
                         <h3>Real-Time Monitoring</h3>
+
                         <p>
-                            Monitor gym occupancy
-                            and member activity.
+                            View gym occupancy and
+                            active member activity.
                         </p>
+
                     </div>
 
                 </div>
 
             </section>
+
+            <!-- TRANSACTIONS -->
 
             <section id="transactions">
 
                 <h2>Transaction Logs</h2>
 
-                <div class="member-feature-grid">
+                <p>
+                    Transaction records track all financial
+                    activities associated with member accounts.
+                </p>
 
-                    <div class="member-feature-card">
-                        <h3>Payments</h3>
-                        <p>
-                            Membership payment records.
-                        </p>
-                    </div>
+                <table class="member-table">
 
-                    <div class="member-feature-card">
-                        <h3>Subscription Extensions</h3>
-                        <p>
-                            Renewal and extension history.
-                        </p>
-                    </div>
+                    <thead>
 
-                    <div class="member-feature-card">
-                        <h3>Adjustments</h3>
-                        <p>
-                            Manual account modifications.
-                        </p>
-                    </div>
+                        <tr>
+                            <th>Transaction Type</th>
+                            <th>Description</th>
+                        </tr>
 
-                    <div class="member-feature-card">
-                        <h3>Audit History</h3>
-                        <p>
-                            Tracks who performed
-                            each transaction.
-                        </p>
-                    </div>
+                    </thead>
 
-                </div>
+                    <tbody>
+
+                        <tr>
+                            <td>Membership Payment</td>
+                            <td>Subscription payments.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Membership Renewal</td>
+                            <td>Extension of active membership.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Plan Upgrade</td>
+                            <td>Upgrade to higher-tier plans.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Refund Request</td>
+                            <td>Refund processing records.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Manual Adjustment</td>
+                            <td>Administrative modifications.</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
 
             </section>
+
+            <!-- VIOLATIONS -->
 
             <section id="violations">
 
                 <h2>Violation Logs</h2>
 
-                <div class="member-feature-grid">
+                <p>
+                    Violation records allow administrators
+                    to document disciplinary actions and
+                    member policy infractions.
+                </p>
 
-                    <div class="member-feature-card">
-                        <h3>Violation Tracking</h3>
-                        <p>
-                            Record and monitor member violations.
-                        </p>
-                    </div>
+                <table class="member-table">
 
-                    <div class="member-feature-card">
-                        <h3>Penalty Monitoring</h3>
-                        <p>
-                            Track penalties and resolutions.
-                        </p>
-                    </div>
+                    <thead>
 
-                    <div class="member-feature-card">
-                        <h3>History Records</h3>
-                        <p>
-                            Review all disciplinary incidents.
-                        </p>
-                    </div>
+                        <tr>
+                            <th>Field</th>
+                            <th>Description</th>
+                        </tr>
 
-                </div>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Date</td>
+                            <td>Date violation occurred.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Violation Type</td>
+                            <td>Category of policy breach.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Description</td>
+                            <td>Detailed explanation.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Penalty</td>
+                            <td>Assigned disciplinary action.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Status</td>
+                            <td>Open, Resolved, or Closed.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Logged By</td>
+                            <td>Administrator who recorded the violation.</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
 
             </section>
+
+            <!-- DEACTIVATION -->
 
             <section id="deactivation">
 
@@ -359,29 +517,100 @@
                 <div class="member-feature-grid">
 
                     <div class="member-feature-card">
-                        <h3>Soft Deactivation</h3>
+
+                        <h3>Access Removal</h3>
+
                         <p>
-                            Preserve records while restricting access.
+                            Immediately restrict system access.
                         </p>
+
                     </div>
 
                     <div class="member-feature-card">
-                        <h3>QR Access Revocation</h3>
+
+                        <h3>QR Revocation</h3>
+
                         <p>
-                            Disable attendance check-ins immediately.
+                            Disable future attendance scans.
                         </p>
+
                     </div>
 
                     <div class="member-feature-card">
-                        <h3>Account Reactivation</h3>
+
+                        <h3>Session Termination</h3>
+
                         <p>
-                            Restore member access when approved.
+                            End active user sessions.
                         </p>
+
+                    </div>
+
+                    <div class="member-feature-card">
+
+                        <h3>Data Preservation</h3>
+
+                        <p>
+                            Retain historical records and logs.
+                        </p>
+
                     </div>
 
                 </div>
 
             </section>
+
+            <!-- AUDIT -->
+
+            <section id="audit">
+
+                <h2>Audit Trail</h2>
+
+                <p>
+                    All administrative actions are logged to maintain
+                    accountability and traceability throughout the system.
+                </p>
+
+                <table class="member-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>Audit Field</th>
+                            <th>Description</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Acting User</td>
+                            <td>Administrator performing the action.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Timestamp</td>
+                            <td>Date and time of activity.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Action Type</td>
+                            <td>Create, Update, Delete, Approve, Reject.</td>
+                        </tr>
+
+                        <tr>
+                            <td>Affected Record</td>
+                            <td>Target member account.</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+            <!-- PERMISSIONS -->
 
             <section id="permissions">
 
@@ -390,11 +619,13 @@
                 <table class="member-table">
 
                     <thead>
+
                         <tr>
                             <th>Action</th>
                             <th>Owner</th>
                             <th>Staff</th>
                         </tr>
+
                     </thead>
 
                     <tbody>
@@ -406,7 +637,7 @@
                         </tr>
 
                         <tr>
-                            <td>Edit Profiles</td>
+                            <td>Edit Member Profiles</td>
                             <td>✓</td>
                             <td>✓</td>
                         </tr>
@@ -418,13 +649,19 @@
                         </tr>
 
                         <tr>
-                            <td>Deactivate Member</td>
+                            <td>Reject Waitlist</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+
+                        <tr>
+                            <td>Deactivate Members</td>
                             <td>✓</td>
                             <td>✕</td>
                         </tr>
 
                         <tr>
-                            <td>Reactivate Member</td>
+                            <td>Reactivate Members</td>
                             <td>✓</td>
                             <td>✕</td>
                         </tr>
