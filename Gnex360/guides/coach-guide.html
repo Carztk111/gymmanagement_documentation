@@ -1,386 +1,1182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>Coach Guide | GNEX 360</title>
-    <link rel="stylesheet" href="guide.css">
+
+    <link rel="stylesheet"
+          href="guide.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
+
 <body>
 
 <div class="guide-wrapper">
 
-<section class="guide-header">
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
 
-    <a href="../index.html#for-coaches"
-       class="guide-back-button">
-        ← Back to Main Manual
-    </a>
+    <section class="guide-hero">
 
-    <span class="guide-tag">
+        <a href="../index.html#for-coaches"
+           class="back-button">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Manual
+
+        </a>
+
+        <div class="hero-tag">
+
+            <i class="fa-solid fa-dumbbell"></i>
+            COACH DOCUMENTATION
+
+        </div>
+
+        <h1>Coach Guide</h1>
+
+        <p class="hero-description">
+
+            Learn how to manage assigned classes,
+            monitor attendance, review member
+            participation, track fitness progress,
+            and support training programs through
+            GNEX 360.
+
+        </p>
+
+        <div class="hero-stats">
+
+            <div class="hero-stat">
+
+                <h3>5</h3>
+
+                <p>
+                    Core Coach
+                    Functions
+                </p>
+
+            </div>
+
+            <div class="hero-stat">
+
+                <h3>24/7</h3>
+
+                <p>
+                    Schedule
+                    Access
+                </p>
+
+            </div>
+
+            <div class="hero-stat">
+
+                <h3>100%</h3>
+
+                <p>
+                    Attendance
+                    Visibility
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         MAIN LAYOUT
+    ========================== -->
+
+    <div class="guide-layout">
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside class="guide-sidebar">
+
+            <h3>ON THIS PAGE</h3>
+
+            <nav>
+                                <a href="#overview" class="guide-link">
+
+                    <i class="fa-solid fa-circle-info"></i>
+                    Overview
+
+                </a>
+
+                <a href="#capabilities" class="guide-link">
+
+                    <i class="fa-solid fa-user-shield"></i>
+                    Coach Capabilities
+
+                </a>
+
+                <a href="#pages" class="guide-link">
+
+                    <i class="fa-solid fa-layer-group"></i>
+                    Functional Pages
+
+                </a>
+
+                <a href="#workflow" class="guide-link">
+
+                    <i class="fa-solid fa-diagram-project"></i>
+                    Coach Workflow
+
+                </a>
+
+                <a href="#schedule" class="guide-link">
+
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Class Schedule Management
+
+                </a>
+
+                <a href="#attendance" class="guide-link">
+
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    Attendance Monitoring
+
+                </a>
+
+                <a href="#members" class="guide-link">
+
+                    <i class="fa-solid fa-users"></i>
+                    Member Monitoring
+
+                </a>
+
+                <a href="#progress" class="guide-link">
+
+                    <i class="fa-solid fa-chart-line"></i>
+                    Progress Tracking
+
+                </a>
+
+                <a href="#communication" class="guide-link">
+
+                    <i class="fa-solid fa-comments"></i>
+                    Communication Tools
+
+                </a>
+
+                <a href="#rbac" class="guide-link">
+
+                    <i class="fa-solid fa-table-cells-large"></i>
+                    RBAC Matrix
+
+                </a>
+
+            </nav>
+
+        </aside>
+
+        <!-- =========================
+             CONTENT
+        ========================== -->
+
+        <main class="guide-content">
+            </aside>
+            <!-- =========================
+     OVERVIEW
+========================= -->
+
+<section id="overview">
+
+    <span class="section-tag">
         COACH GUIDE
     </span>
 
-    <h1>Coach User Manual</h1>
+    <h2>Overview</h2>
 
     <p>
-        Learn how to manage classes, monitor attendance,
-        track member progress, and support fitness programs
-        using GNEX 360.
+
+        Coaches use GNEX 360 to oversee assigned
+        classes, monitor attendance, review member
+        participation, and track fitness progress.
+        The system provides coaches with tools to
+        manage training activities and support
+        members throughout their fitness journey.
+
     </p>
 
-    <div class="guide-stats">
+</section>
 
-        <div class="guide-stat-card">
-            <h3>4</h3>
-            <p>Core Coach Functions</p>
+<!-- =========================
+     COACH CAPABILITIES
+========================= -->
+
+<section id="capabilities">
+
+    <span class="section-tag">
+        COACH PERMISSIONS
+    </span>
+
+    <h2>Coach Capabilities</h2>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-calendar-check"></i>
+
+            <h3>
+                Class Management
+            </h3>
+
+            <ul>
+
+                <li>View assigned schedules</li>
+
+                <li>Review class participants</li>
+
+                <li>Monitor attendance records</li>
+
+                <li>Manage training sessions</li>
+
+            </ul>
+
         </div>
 
-        <div class="guide-stat-card">
-            <h3>24/7</h3>
-            <p>Schedule Access</p>
+        <div class="feature-card">
+
+            <i class="fa-solid fa-users"></i>
+
+            <h3>
+                Member Monitoring
+            </h3>
+
+            <ul>
+
+                <li>View member profiles</li>
+
+                <li>Review attendance history</li>
+
+                <li>Monitor participation</li>
+
+                <li>Track engagement levels</li>
+
+            </ul>
+
         </div>
 
-        <div class="guide-stat-card">
-            <h3>100%</h3>
-            <p>Attendance Visibility</p>
+        <div class="feature-card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h3>
+                Progress Tracking
+            </h3>
+
+            <ul>
+
+                <li>Record observations</li>
+
+                <li>Monitor training goals</li>
+
+                <li>Track improvements</li>
+
+                <li>Review achievements</li>
+
+            </ul>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-comments"></i>
+
+            <h3>
+                Communication
+            </h3>
+
+            <ul>
+
+                <li>Receive notifications</li>
+
+                <li>Review class updates</li>
+
+                <li>Coordinate training activities</li>
+
+                <li>Stay informed of schedule changes</li>
+
+            </ul>
+
         </div>
 
     </div>
 
 </section>
 
-<div class="guide-layout">
+<!-- =========================
+     FUNCTIONAL PAGES
+========================= -->
 
-    <aside class="guide-sidebar">
+<section id="pages">
 
-        <h3>COACH GUIDE</h3>
+    <span class="section-tag">
+        COACH FEATURES
+    </span>
 
-        <nav class="guide-nav">
+    <h2>Coach Functional Pages</h2>
 
-            <a href="#overview" class="guide-link">Overview</a>
+    <div class="page-grid">
 
-            <a href="#dashboard" class="guide-link">Dashboard</a>
+        <div class="page-card">
 
-            <a href="#schedule" class="guide-link">Class Schedule</a>
+            <i class="fa-solid fa-gauge"></i>
 
-            <a href="#attendance" class="guide-link">Attendance Tracking</a>
-
-            <a href="#members" class="guide-link">Member Monitoring</a>
-
-            <a href="#progress" class="guide-link">Progress Tracking</a>
-
-            <a href="#communication" class="guide-link">Member Communication</a>
-
-            <a href="#workflow" class="guide-link">Coach Workflow</a>
-
-            <a href="#faq" class="guide-link">FAQ</a>
-
-        </nav>
-
-    </aside>
-
-    <main class="guide-content">
-
-        <section id="overview">
-
-            <h2>Overview</h2>
+            <h3>
+                Dashboard
+            </h3>
 
             <p>
-                Coaches use GNEX 360 to oversee assigned classes,
-                monitor attendance, support members, and track
-                overall fitness progress.
+
+                Displays attendance summaries,
+                assigned classes, notifications,
+                and coaching activities.
+
             </p>
 
-        </section>
+        </div>
 
-        <section id="dashboard">
+        <div class="page-card">
 
-            <h2>Dashboard Overview</h2>
+            <i class="fa-solid fa-calendar-days"></i>
 
-            <div class="feature-grid">
-
-                <div class="feature-card">
-                    <h3>Assigned Classes</h3>
-                    <p>
-                        View upcoming and active training sessions.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>Attendance Summary</h3>
-                    <p>
-                        Monitor class attendance records.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>Member Progress</h3>
-                    <p>
-                        Track performance and participation.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>Notifications</h3>
-                    <p>
-                        Receive updates related to schedules and classes.
-                    </p>
-                </div>
-
-            </div>
-
-        </section>
-
-        <section id="schedule">
-
-            <h2>Class Schedule Management</h2>
-
-            <div class="step-list">
-
-                <div class="step-item">
-                    <span>1</span>
-                    <div>
-                        <h3>Login</h3>
-                        <p>Access the Coach Dashboard.</p>
-                    </div>
-                </div>
-
-                <div class="step-item">
-                    <span>2</span>
-                    <div>
-                        <h3>Open Schedule</h3>
-                        <p>View assigned classes and training sessions.</p>
-                    </div>
-                </div>
-
-                <div class="step-item">
-                    <span>3</span>
-                    <div>
-                        <h3>Review Participants</h3>
-                        <p>Check registered members for each class.</p>
-                    </div>
-                </div>
-
-                <div class="step-item">
-                    <span>4</span>
-                    <div>
-                        <h3>Conduct Session</h3>
-                        <p>Manage attendance and member engagement.</p>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
-        <section id="attendance">
-
-            <h2>Attendance Tracking</h2>
+            <h3>
+                Class Schedule
+            </h3>
 
             <p>
-                Coaches can review attendance records generated
-                through the QR Check-In System.
+
+                View upcoming classes,
+                schedules, and registered
+                participants.
+
             </p>
 
-            <table class="guide-table">
+        </div>
 
-                <thead>
-                    <tr>
-                        <th>Information</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
+        <div class="page-card">
 
-                <tbody>
+            <i class="fa-solid fa-clipboard-check"></i>
 
-                    <tr>
-                        <td>Member Name</td>
-                        <td>Registered participant.</td>
-                    </tr>
-
-                    <tr>
-                        <td>Attendance Date</td>
-                        <td>Recorded attendance day.</td>
-                    </tr>
-
-                    <tr>
-                        <td>Check-In Time</td>
-                        <td>Member arrival time.</td>
-                    </tr>
-
-                    <tr>
-                        <td>Status</td>
-                        <td>Present or absent record.</td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </section>
-
-        <section id="members">
-
-            <h2>Member Monitoring</h2>
-
-            <div class="feature-grid">
-
-                <div class="feature-card">
-                    <h3>Attendance History</h3>
-                    <p>
-                        Monitor participation consistency.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>Member Profiles</h3>
-                    <p>
-                        Review member information and training records.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>Training Participation</h3>
-                    <p>
-                        Monitor class engagement and attendance.
-                    </p>
-                </div>
-
-            </div>
-
-        </section>
-
-        <section id="progress">
-
-            <h2>Progress Tracking</h2>
-
-            <div class="feature-grid">
-
-                <div class="feature-card">
-                    <h3>Performance Notes</h3>
-                    <p>
-                        Record observations and achievements.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>Training Goals</h3>
-                    <p>
-                        Track progress toward fitness objectives.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>Improvement Monitoring</h3>
-                    <p>
-                        Evaluate member development over time.
-                    </p>
-                </div>
-
-            </div>
-
-        </section>
-
-        <section id="communication">
-
-            <h2>Member Communication</h2>
+            <h3>
+                Attendance Monitoring
+            </h3>
 
             <p>
-                Coaches may communicate schedule updates,
-                reminders, and training instructions to members.
+
+                Review attendance records
+                generated through the QR
+                attendance system.
+
             </p>
 
-        </section>
+        </div>
 
-        <section id="workflow">
+        <div class="page-card">
 
-            <h2>Coach Workflow</h2>
+            <i class="fa-solid fa-users"></i>
 
-            <div class="workflow">
+            <h3>
+                Member Profiles
+            </h3>
 
-                <div class="workflow-step">
-                    Login
-                </div>
+            <p>
 
-                <div class="workflow-arrow">→</div>
+                View member information
+                and participation records
+                related to assigned classes.
 
-                <div class="workflow-step">
-                    Review Schedule
-                </div>
+            </p>
 
-                <div class="workflow-arrow">→</div>
+        </div>
 
-                <div class="workflow-step">
-                    Conduct Class
-                </div>
+        <div class="page-card">
 
-                <div class="workflow-arrow">→</div>
+            <i class="fa-solid fa-chart-line"></i>
 
-                <div class="workflow-step">
-                    Monitor Attendance
-                </div>
+            <h3>
+                Progress Tracking
+            </h3>
 
-                <div class="workflow-arrow">→</div>
+            <p>
 
-                <div class="workflow-step">
-                    Record Progress
-                </div>
+                Track goals, improvements,
+                achievements, and fitness
+                development.
+
+            </p>
+
+        </div>
+
+        <div class="page-card">
+
+            <i class="fa-solid fa-bell"></i>
+
+            <h3>
+                Notifications
+            </h3>
+
+            <p>
+
+                Receive updates regarding
+                schedules, classes, and
+                system announcements.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+     COACH WORKFLOW
+========================= -->
+
+<section id="workflow">
+
+    <span class="section-tag">
+        COACH PROCESS
+    </span>
+
+    <h2>Coach Workflow</h2>
+
+    <p>
+
+        The following workflow outlines the
+        standard process followed by coaches
+        when managing classes and monitoring
+        member activities within GNEX 360.
+
+    </p>
+
+    <div class="accordion">
+
+        <div class="accordion-item">
+
+            <div class="accordion-header">
+
+                <span>1</span>
+
+                Login to GNEX 360
+
+                <div class="accordion-icon">▼</div>
 
             </div>
 
-        </section>
+            <div class="accordion-content">
 
-        <section id="faq">
+                <p>
 
-            <h2>Frequently Asked Questions</h2>
+                    Coaches access GNEX 360 using
+                    authorized credentials to view
+                    schedules, attendance records,
+                    and coaching tools.
 
-            <div class="faq-grid">
-
-                <div class="feature-card">
-
-                    <h3>Can coaches modify memberships?</h3>
-
-                    <p>
-                        No. Membership management is handled by administrators.
-                    </p>
-
-                </div>
-
-                <div class="feature-card">
-
-                    <h3>Can coaches view attendance records?</h3>
-
-                    <p>
-                        Yes. Coaches can review attendance for assigned classes.
-                    </p>
-
-                </div>
-
-                <div class="feature-card">
-
-                    <h3>Can coaches manage members?</h3>
-
-                    <p>
-                        Coaches can view member information relevant to their classes.
-                    </p>
-
-                </div>
+                </p>
 
             </div>
 
-        </section>
+        </div>
 
-    </main>
+        <div class="accordion-item">
 
-</div>
+            <div class="accordion-header">
 
-</div>
+                <span>2</span>
 
-<button id="backToTop" class="back-to-top">
-    ↑
-</button>
+                Review Assigned Classes
 
+                <div class="accordion-icon">▼</div>
+
+            </div>
+
+            <div class="accordion-content">
+
+                <p>
+
+                    Coaches review upcoming classes,
+                    schedules, and participant lists
+                    before conducting training sessions.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+            <div class="accordion-header">
+
+                <span>3</span>
+
+                Conduct Training Session
+
+                <div class="accordion-icon">▼</div>
+
+            </div>
+
+            <div class="accordion-content">
+
+                <p>
+
+                    Coaches facilitate training
+                    activities, supervise exercises,
+                    and assist members during sessions.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+            <div class="accordion-header">
+
+                <span>4</span>
+
+                Monitor Attendance
+
+                <div class="accordion-icon">▼</div>
+
+            </div>
+
+            <div class="accordion-content">
+
+                <p>
+
+                    Attendance records generated
+                    through QR Check-In can be
+                    reviewed to monitor participation.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+            <div class="accordion-header">
+
+                <span>5</span>
+
+                Track Member Progress
+
+                <div class="accordion-icon">▼</div>
+
+            </div>
+
+            <div class="accordion-content">
+
+                <p>
+
+                    Coaches evaluate performance,
+                    record observations, and monitor
+                    member development over time.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     CLASS SCHEDULE MANAGEMENT
+========================= -->
+
+<section id="schedule">
+
+    <span class="section-tag">
+        CLASS OPERATIONS
+    </span>
+
+    <h2>Class Schedule Management</h2>
+
+    <div class="accordion">
+
+        <div class="accordion-item">
+
+            <div class="accordion-header">
+
+                <span>1</span>
+
+                Open Schedule Page
+
+                <div class="accordion-icon">▼</div>
+
+            </div>
+
+            <div class="accordion-content">
+
+                <p>
+
+                    Navigate to the Class Schedule
+                    page to view assigned training
+                    sessions and upcoming schedules.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+            <div class="accordion-header">
+
+                <span>2</span>
+
+                Review Participants
+
+                <div class="accordion-icon">▼</div>
+
+            </div>
+
+            <div class="accordion-content">
+
+                <p>
+
+                    Review the list of members
+                    registered for each class
+                    before the session begins.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+            <div class="accordion-header">
+
+                <span>3</span>
+
+                Conduct Class
+
+                <div class="accordion-icon">▼</div>
+
+            </div>
+
+            <div class="accordion-content">
+
+                <p>
+
+                    Facilitate the scheduled
+                    training program and guide
+                    participants through activities.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion-item">
+
+            <div class="accordion-header">
+
+                <span>4</span>
+
+                Monitor Attendance
+
+                <div class="accordion-icon">▼</div>
+
+            </div>
+
+            <div class="accordion-content">
+
+                <p>
+
+                    Verify attendance records
+                    and participation information
+                    generated by the system.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     ATTENDANCE MONITORING
+========================= -->
+
+<section id="attendance">
+
+    <span class="section-tag">
+        ATTENDANCE RECORDS
+    </span>
+
+    <h2>Attendance Monitoring</h2>
+
+    <p>
+
+        Coaches may review attendance records
+        generated through the QR Check-In
+        system to monitor participation in
+        assigned classes.
+
+    </p>
+
+    <table class="guide-table">
+
+        <thead>
+
+            <tr>
+
+                <th>Information</th>
+
+                <th>Description</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Member Name</td>
+
+                <td>Registered participant.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Attendance Date</td>
+
+                <td>Date of attendance.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Check-In Time</td>
+
+                <td>Recorded arrival time.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Status</td>
+
+                <td>Present or absent record.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Assigned Class</td>
+
+                <td>Related training session.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+<!-- =========================
+     MEMBER MONITORING
+========================= -->
+
+<section id="members">
+
+    <span class="section-tag">
+        MEMBER OVERSIGHT
+    </span>
+
+    <h2>Member Monitoring</h2>
+
+    <p>
+
+        Coaches can review member information,
+        attendance history, and participation
+        records related to assigned classes.
+
+    </p>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-user-group"></i>
+
+            <h3>
+                Member Profiles
+            </h3>
+
+            <ul>
+
+                <li>View assigned members</li>
+
+                <li>Review profile information</li>
+
+                <li>Check participation records</li>
+
+                <li>Monitor class engagement</li>
+
+            </ul>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h3>
+                Participation Tracking
+            </h3>
+
+            <ul>
+
+                <li>Review attendance trends</li>
+
+                <li>Monitor consistency</li>
+
+                <li>Identify inactive members</li>
+
+                <li>Support engagement goals</li>
+
+            </ul>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-dumbbell"></i>
+
+            <h3>
+                Training Participation
+            </h3>
+
+            <ul>
+
+                <li>Monitor class activity</li>
+
+                <li>Review completed sessions</li>
+
+                <li>Track involvement levels</li>
+
+                <li>Evaluate participation rates</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     PROGRESS TRACKING
+========================= -->
+
+<section id="progress">
+
+    <span class="section-tag">
+        PERFORMANCE MONITORING
+    </span>
+
+    <h2>Progress Tracking</h2>
+
+    <p>
+
+        Coaches may evaluate member performance,
+        monitor development, and record fitness
+        achievements throughout training programs.
+
+    </p>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-notes-medical"></i>
+
+            <h3>
+                Performance Notes
+            </h3>
+
+            <ul>
+
+                <li>Record observations</li>
+
+                <li>Track improvements</li>
+
+                <li>Document achievements</li>
+
+                <li>Monitor performance changes</li>
+
+            </ul>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-bullseye"></i>
+
+            <h3>
+                Goal Monitoring
+            </h3>
+
+            <ul>
+
+                <li>Review fitness goals</li>
+
+                <li>Track milestones</li>
+
+                <li>Evaluate progress</li>
+
+                <li>Support member objectives</li>
+
+            </ul>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-arrow-trend-up"></i>
+
+            <h3>
+                Improvement Analysis
+            </h3>
+
+            <ul>
+
+                <li>Evaluate growth</li>
+
+                <li>Identify strengths</li>
+
+                <li>Address weaknesses</li>
+
+                <li>Measure development</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     COMMUNICATION TOOLS
+========================= -->
+
+<section id="communication">
+
+    <span class="section-tag">
+        COMMUNICATION
+    </span>
+
+    <h2>Member Communication</h2>
+
+    <p>
+
+        Coaches may communicate schedule updates,
+        reminders, and training instructions to
+        members through GNEX 360.
+
+    </p>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-bell"></i>
+
+            <h3>
+                Class Announcements
+            </h3>
+
+            <p>
+
+                Notify participants regarding
+                schedule updates and training
+                reminders.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <h3>
+                Member Notifications
+            </h3>
+
+            <p>
+
+                Deliver important information
+                related to training sessions
+                and participation.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-comments"></i>
+
+            <h3>
+                Coaching Guidance
+            </h3>
+
+            <p>
+
+                Provide instructions, feedback,
+                and training recommendations.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     RBAC MATRIX
+========================= -->
+
+<section id="rbac">
+
+    <span class="section-tag">
+        ACCESS CONTROL
+    </span>
+
+    <h2>Coach Role Permissions Matrix</h2>
+
+    <table class="guide-table">
+
+        <thead>
+
+            <tr>
+
+                <th>System Function</th>
+
+                <th>Coach</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>View Assigned Classes</td>
+
+                <td>✓</td>
+
+            </tr>
+
+            <tr>
+
+                <td>View Attendance Records</td>
+
+                <td>✓</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Monitor Member Progress</td>
+
+                <td>✓</td>
+
+            </tr>
+
+            <tr>
+
+                <td>View Member Profiles</td>
+
+                <td>✓</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Manage Memberships</td>
+
+                <td>✕</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Approve Registrations</td>
+
+                <td>✕</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Manage Employees</td>
+
+                <td>✕</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Generate Reports</td>
+
+                <td>✕</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Modify System Settings</td>
+
+                <td>✕</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+</main>
 <script src="guide.js"></script>
 
 </body>
