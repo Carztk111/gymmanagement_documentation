@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* ====================================
+    /* =========================
        SIDEBAR NAVIGATION
-    ==================================== */
+    ========================= */
 
     const links =
         document.querySelectorAll(".guide-link");
@@ -36,6 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
+    /* =========================
+       ACTIVE SIDEBAR LINK
+    ========================= */
+
     function updateActiveLink(){
 
         let current = "";
@@ -60,17 +64,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         links.forEach(link => {
 
-            link.classList.remove(
-                "active"
-            );
+            link.classList.remove("active");
 
             if(
-                link.getAttribute("href") ===
-                "#" + current
+                link.getAttribute("href")
+                === "#" + current
             ){
-                link.classList.add(
-                    "active"
-                );
+                link.classList.add("active");
             }
 
         });
@@ -84,9 +84,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateActiveLink();
 
-    /* ====================================
-       ACCORDION FUNCTIONALITY
-    ==================================== */
+    /* =========================
+       ACCORDION
+    ========================= */
 
     const accordionHeaders =
         document.querySelectorAll(
@@ -97,11 +97,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         header.addEventListener("click", () => {
 
-            const currentItem =
+            const item =
                 header.parentElement;
 
             const isOpen =
-                currentItem.classList.contains(
+                item.classList.contains(
                     "active"
                 );
 
@@ -109,9 +109,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 .querySelectorAll(
                     ".accordion-item"
                 )
-                .forEach(item => {
+                .forEach(acc => {
 
-                    item.classList.remove(
+                    acc.classList.remove(
                         "active"
                     );
 
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if(!isOpen){
 
-                currentItem.classList.add(
+                item.classList.add(
                     "active"
                 );
 
@@ -129,19 +129,53 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    /* ====================================
-       OPEN FIRST ACCORDION BY DEFAULT
-    ==================================== */
+    /* =========================
+       BACK TO TOP BUTTON
+    ========================= */
 
-    const firstAccordion =
-        document.querySelector(
-            ".accordion-item"
+    const backToTop =
+        document.getElementById(
+            "backToTop"
         );
 
-    if(firstAccordion){
+    if(backToTop){
 
-        firstAccordion.classList.add(
-            "active"
+        window.addEventListener(
+            "scroll",
+            () => {
+
+                if(
+                    window.scrollY > 500
+                ){
+
+                    backToTop.classList.add(
+                        "show"
+                    );
+
+                }else{
+
+                    backToTop.classList.remove(
+                        "show"
+                    );
+
+                }
+
+            }
+        );
+
+        backToTop.addEventListener(
+            "click",
+            () => {
+
+                window.scrollTo({
+
+                    top:0,
+
+                    behavior:"smooth"
+
+                });
+
+            }
         );
 
     }
