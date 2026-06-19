@@ -73,16 +73,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
-    // FAQ Accordion - toggle open/close
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        
-        if (question) {
-            question.addEventListener('click', function() {
-                item.classList.toggle('open');
-            });
-        }
-    });
 });
