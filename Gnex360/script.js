@@ -1,136 +1,62 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    const navItems = document.querySelectorAll('.nav-item');
-    const mainContent = document.querySelector('.main-content');
-    const searchInput = document.getElementById('searchInput');
-
     const sidebar = document.querySelector('.sidebar');
     const menuButton = document.getElementById('mobileMenuBtn');
-    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const overlay = document.getElementById('sidebarOverlay');
+    const mainContent = document.querySelector('.main-content');
 
-    // =====================================
-    // MOBILE SIDEBAR
-    // =====================================
+    const navItems = document.querySelectorAll('.nav-item');
+    const searchInput = document.getElementById('searchInput');
 
-    function openSidebar() {
+    // Check required mobile elements
+    if (!sidebar || !menuButton || !overlay || !mainContent) {
+        console.error('GNEX 360: Navigation elements are missing.');
+        return;
+    }
+
+    // OPEN SIDEBAR
+    function openMenu() {
         sidebar.classList.add('active');
-        sidebarOverlay.classList.add('active');
+        overlay.classList.add('active');
 
         menuButton.innerHTML = '✕';
+        menuButton.setAttribute('aria-label', 'Close navigation menu');
         menuButton.setAttribute('aria-expanded', 'true');
-
-        document.body.style.overflow = 'hidden';
     }
 
-    function closeSidebar() {
+    // CLOSE SIDEBAR
+    function closeMenu() {
         sidebar.classList.remove('active');
-        sidebarOverlay.classList.remove('active');
+        overlay.classList.remove('active');
 
         menuButton.innerHTML = '☰';
+        menuButton.setAttribute('aria-label', 'Open navigation menu');
         menuButton.setAttribute('aria-expanded', 'false');
-
-        document.body.style.overflow = '';
-
-        // Keep desktop layout behavior
-        if (window.innerWidth <= 768) {
-            document.body.style.overflow = 'hidden';
-        }
     }
 
-    menuButton.addEventListener('click', function () {
+    // HAMBURGER BUTTON
+    menuButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
 
         if (sidebar.classList.contains('active')) {
-            closeSidebar();
+            closeMenu();
         } else {
-            openSidebar();
+            openMenu();
         }
-
     });
 
-    sidebarOverlay.addEventListener('click', closeSidebar);
+    // CLICK OUTSIDE SIDEBAR
+    overlay.addEventListener('click', closeMenu);
 
-    // Close menu using Escape key
+    // ESCAPE KEY
     document.addEventListener('keydown', function (e) {
-
         if (e.key === 'Escape') {
-            closeSidebar();
+            closeMenu();
         }
-
     });
 
-    // Close sidebar when resizing to desktop
-    window.addEventListener('resize', function () {
-
-        if (window.innerWidth > 768) {
-            closeSidebar();
-        }
-
-        updateActiveNav();
-
-    });
-
-
-    // =====================================
-    // ACTIVE NAVIGATION TRACKING
-    // =====================================
-
-    function updateActiveNav() {
-
-        const sections = document.querySelectorAll('.content-section');
-
-        let current = '';
-
-        sections.forEach(section => {
-
-            const sectionTop =
-                section.getBoundingClientRect().top -
-                mainContent.getBoundingClientRect().top;
-
-            const sectionBottom =
-                sectionTop + section.offsetHeight;
-
-            if (
-                sectionTop <= 160 &&
-                sectionBottom > 160
-            ) {
-                current = section.getAttribute('id');
-            }
-
-        });
-
-        navItems.forEach(item => {
-
-            item.classList.remove('active');
-
-            const href = item.getAttribute('href');
-
-            if (href && href.substring(1) === current) {
-
-                item.classList.add('active');
-
-                if (sidebar.classList.contains('active')) {
-                    item.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'nearest'
-                    });
-                }
-
-            }
-
-        });
-
-    }
-
-    // Track scrolling
-    mainContent.addEventListener('scroll', updateActiveNav);
-
-    updateActiveNav();
-
-
-    // =====================================
-    // NAVIGATION CLICK
-    // =====================================
-
+    // NAVIGATION
     navItems.forEach(item => {
 
         item.addEventListener('click', function (e) {
@@ -138,42 +64,78 @@ document.addEventListener('DOMContentLoaded', function () {
             e.preventDefault();
 
             const targetId = this.getAttribute('href').substring(1);
+            const target = document.getElementById(targetId);
 
-            const targetSection = document.getElementById(targetId);
+            if (target) {
 
-            if (targetSection) {
-
-                const offset =
-                    targetSection.getBoundingClientRect().top -
+                const position =
+                    target.getBoundingClientRect().top -
                     mainContent.getBoundingClientRect().top +
                     mainContent.scrollTop;
 
                 mainContent.scrollTo({
-                    top: offset,
+                    top: position,
                     behavior: 'smooth'
                 });
 
-                // Close mobile menu after selecting a section
                 if (window.innerWidth <= 768) {
-                    closeSidebar();
+                    closeMenu();
                 }
-
             }
 
         });
 
     });
 
+    // ACTIVE NAVIGATION
+    function updateActiveNav() {
 
-    // =====================================
-    // SEARCH FUNCTIONALITY
-    // =====================================
+        const sections = document.querySelectorAll('.content-section');
+        let current = '';
 
+        sections.forEach(section => {
+
+            const top =
+                section.getBoundingClientRect().top -
+                mainContent.getBoundingClientRect().top;
+
+            const bottom = top + section.offsetHeight;
+
+            if (top <= 160 && bottom > 160) {
+                current = section.id;
+            }
+
+        });
+
+        navItems.forEach(item => {
+
+            item.classList.toggle(
+                'active',
+                item.getAttribute('href') === '#' + current
+            );
+
+        });
+
+    }
+
+    mainContent.addEventListener('scroll', updateActiveNav);
+
+    window.addEventListener('resize', function () {
+
+        if (window.innerWidth > 768) {
+            closeMenu();
+        }
+
+        updateActiveNav();
+
+    });
+
+    // SEARCH
     if (searchInput) {
 
-        searchInput.addEventListener('input', function (e) {
+        searchInput.addEventListener('input', function () {
 
-            const searchTerm = e.target.value.toLowerCase().trim();
+            const term = this.value.toLowerCase().trim();
 
             navItems.forEach(item => {
 
@@ -181,25 +143,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (!label) return;
 
-                const text = label.textContent.toLowerCase();
-
-                if (
-                    text.includes(searchTerm) ||
-                    searchTerm === ''
-                ) {
-
-                    item.style.display = 'flex';
-
-                } else {
-
-                    item.style.display = 'none';
-
-                }
+                item.style.display =
+                    label.textContent.toLowerCase().includes(term)
+                    ? 'flex'
+                    : 'none';
 
             });
 
         });
 
     }
+
+    updateActiveNav();
 
 });
