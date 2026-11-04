@@ -1404,3 +1404,89 @@ p {
     }
 
 }
+/* =====================================
+   FIX: MOBILE HAMBURGER NAVIGATION
+===================================== */
+
+.mobile-menu-btn {
+    display: none;
+    position: fixed !important;
+    top: 15px;
+    left: 15px;
+
+    width: 48px;
+    height: 48px;
+
+    background: #ff3333;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 26px;
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 99999 !important;
+    pointer-events: auto !important;
+    touch-action: manipulation;
+}
+
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 1500;
+}
+
+.sidebar-overlay.active {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+
+    .mobile-menu-btn {
+        display: flex !important;
+    }
+
+    .sidebar {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 280px;
+        max-width: 85vw;
+        height: 100vh;
+
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+
+        z-index: 2000;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+        width: 100%;
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .content-section {
+        padding: 75px 20px 35px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .mobile-menu-btn {
+        display: flex !important;
+    }
+}
