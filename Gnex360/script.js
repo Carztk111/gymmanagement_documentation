@@ -1,76 +1,205 @@
-// Single-page scrolling with reliable anchor navigation and scroll tracking
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+
     const navItems = document.querySelectorAll('.nav-item');
     const mainContent = document.querySelector('.main-content');
     const searchInput = document.getElementById('searchInput');
 
-    // Enhanced scroll tracking - update active nav item based on scroll position
-    function updateActiveNav() {
-        const scrollPos = mainContent.scrollTop;
-        let current = '';
-        
-        // Find which section is currently in view
-        const sections = document.querySelectorAll('.content-section');
-        sections.forEach((section, index) => {
-            const sectionTop = section.offsetTop;
-            const sectionBottom = sectionTop + section.offsetHeight;
-            
-            // If scroll position is within this section, mark it as current
-            if (scrollPos >= sectionTop - 150 && scrollPos < sectionBottom - 150) {
-                current = section.getAttribute('id');
-            }
-        });
+    const sidebar = document.querySelector('.sidebar');
+    const menuButton = document.getElementById('mobileMenuBtn');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
 
-        // Update nav items with active state
-        navItems.forEach(item => {
-            item.classList.remove('active');
-            const href = item.getAttribute('href').substring(1);
-            if (href === current) {
-                item.classList.add('active');
-                // Auto-scroll sidebar to show active item
-                item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }
-        });
+    // =====================================
+    // MOBILE SIDEBAR
+    // =====================================
+
+    function openSidebar() {
+        sidebar.classList.add('active');
+        sidebarOverlay.classList.add('active');
+
+        menuButton.innerHTML = '✕';
+        menuButton.setAttribute('aria-expanded', 'true');
+
+        document.body.style.overflow = 'hidden';
     }
 
-    // Track scroll events
-    mainContent.addEventListener('scroll', updateActiveNav);
-    window.addEventListener('resize', updateActiveNav);
+    function closeSidebar() {
+        sidebar.classList.remove('active');
+        sidebarOverlay.classList.remove('active');
 
-    // Initial call
+        menuButton.innerHTML = '☰';
+        menuButton.setAttribute('aria-expanded', 'false');
+
+        document.body.style.overflow = '';
+
+        // Keep desktop layout behavior
+        if (window.innerWidth <= 768) {
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    menuButton.addEventListener('click', function () {
+
+        if (sidebar.classList.contains('active')) {
+            closeSidebar();
+        } else {
+            openSidebar();
+        }
+
+    });
+
+    sidebarOverlay.addEventListener('click', closeSidebar);
+
+    // Close menu using Escape key
+    document.addEventListener('keydown', function (e) {
+
+        if (e.key === 'Escape') {
+            closeSidebar();
+        }
+
+    });
+
+    // Close sidebar when resizing to desktop
+    window.addEventListener('resize', function () {
+
+        if (window.innerWidth > 768) {
+            closeSidebar();
+        }
+
+        updateActiveNav();
+
+    });
+
+
+    // =====================================
+    // ACTIVE NAVIGATION TRACKING
+    // =====================================
+
+    function updateActiveNav() {
+
+        const sections = document.querySelectorAll('.content-section');
+
+        let current = '';
+
+        sections.forEach(section => {
+
+            const sectionTop =
+                section.getBoundingClientRect().top -
+                mainContent.getBoundingClientRect().top;
+
+            const sectionBottom =
+                sectionTop + section.offsetHeight;
+
+            if (
+                sectionTop <= 160 &&
+                sectionBottom > 160
+            ) {
+                current = section.getAttribute('id');
+            }
+
+        });
+
+        navItems.forEach(item => {
+
+            item.classList.remove('active');
+
+            const href = item.getAttribute('href');
+
+            if (href && href.substring(1) === current) {
+
+                item.classList.add('active');
+
+                if (sidebar.classList.contains('active')) {
+                    item.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'nearest'
+                    });
+                }
+
+            }
+
+        });
+
+    }
+
+    // Track scrolling
+    mainContent.addEventListener('scroll', updateActiveNav);
+
     updateActiveNav();
 
-    // Smooth scroll on nav click
+
+    // =====================================
+    // NAVIGATION CLICK
+    // =====================================
+
     navItems.forEach(item => {
-        item.addEventListener('click', function(e) {
+
+        item.addEventListener('click', function (e) {
+
             e.preventDefault();
+
             const targetId = this.getAttribute('href').substring(1);
+
             const targetSection = document.getElementById(targetId);
-            
+
             if (targetSection) {
-                // Calculate the scroll position
-                const offset = targetSection.offsetTop - 20;
+
+                const offset =
+                    targetSection.getBoundingClientRect().top -
+                    mainContent.getBoundingClientRect().top +
+                    mainContent.scrollTop;
+
                 mainContent.scrollTo({
                     top: offset,
                     behavior: 'smooth'
                 });
-                
-                console.log('[v0] Scrolling to:', targetId, 'at position:', offset);
+
+                // Close mobile menu after selecting a section
+                if (window.innerWidth <= 768) {
+                    closeSidebar();
+                }
+
             }
+
         });
+
     });
 
-    // Search functionality
-    searchInput.addEventListener('input', function(e) {
-        const searchTerm = e.target.value.toLowerCase();
-        
-        navItems.forEach(item => {
-            const label = item.querySelector('.label').textContent.toLowerCase();
-            if (label.includes(searchTerm) || searchTerm === '') {
-                item.style.display = 'flex';
-            } else {
-                item.style.display = 'none';
-            }
+
+    // =====================================
+    // SEARCH FUNCTIONALITY
+    // =====================================
+
+    if (searchInput) {
+
+        searchInput.addEventListener('input', function (e) {
+
+            const searchTerm = e.target.value.toLowerCase().trim();
+
+            navItems.forEach(item => {
+
+                const label = item.querySelector('.label');
+
+                if (!label) return;
+
+                const text = label.textContent.toLowerCase();
+
+                if (
+                    text.includes(searchTerm) ||
+                    searchTerm === ''
+                ) {
+
+                    item.style.display = 'flex';
+
+                } else {
+
+                    item.style.display = 'none';
+
+                }
+
+            });
+
         });
-    });
+
+    }
+
 });
